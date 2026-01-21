@@ -254,7 +254,7 @@ export default function Page() {
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-slate-700 shadow-sm">
               <span className="h-2 w-2 rounded-full bg-yellow-400" />
-              Real estate clarity, minus the chaos
+              Real estate clarity — minus the chaos
             </div>
 
             <h1 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
@@ -293,7 +293,7 @@ export default function Page() {
               <div className="flex flex-col gap-1">
                 <h2 className="text-lg font-semibold text-slate-900">What can I help you with?</h2>
                 <p className="text-sm text-slate-600">
-                  Ask like you would in a consult. I’ll answer like a pro—without the fluff.
+Ask it like you would in a consult. I’ll answer like a pro—clear, direct, and actionable.
                 </p>
               </div>
 
@@ -340,7 +340,7 @@ export default function Page() {
                   {loading ? (
                     <>
                       <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-slate-900/40 border-t-slate-900" />
-                      Thinking like a Realtor…
+                      Working it out like a Realtor…
                     </>
                   ) : (
                     "Ask"
@@ -515,7 +515,7 @@ export default function Page() {
                 </button>
               </div>
               <p className="mt-1 text-sm text-slate-600">
-                A quick way to revisit what people are curious about.
+               A quick way to revisit what people are asking (and what you might be wondering too).
               </p>
 
               <div className="mt-4 space-y-2">
@@ -554,7 +554,7 @@ export default function Page() {
                 </button>
               </div>
               <p className="mt-1 text-sm text-slate-600">
-                Because nobody remembers everything after the adrenaline wears off.
+                Because nobody remembers everything after the conversation ends.
               </p>
 
               <div className="mt-4 space-y-2">
