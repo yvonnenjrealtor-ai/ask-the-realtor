@@ -5,10 +5,10 @@ export const metadata = {
   title: "Talk to THE Realtor",
   applicationName: "THE Realtor",
   appleWebApp: {
-    capable: true,
     title: "THE Realtor",
-    statusBarStyle: "default",
+    capable: true,
   },
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
