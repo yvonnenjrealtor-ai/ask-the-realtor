@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata = {
-  title: "Talk to the Realtor",
-  applicationName: "Talk to the Realtor",
+  title: "Talk to THE Realtor",
+  applicationName: "THE Realtor",
   appleWebApp: {
-    title: "Talk to the Realtor",
     capable: true,
+    title: "THE Realtor",
+    statusBarStyle: "default",
   },
 };
 
