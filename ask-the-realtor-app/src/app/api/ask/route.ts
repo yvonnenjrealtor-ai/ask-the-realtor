@@ -88,11 +88,8 @@ ${question}
 
     const outputText = response.output_text ?? "";
 return Response.json({ answer: outputText });
-  } catch (err: any) {
-    console.error("Ask API error:", err);
-    return Response.json(
-      { error: "Something went wrong while generating the response." },
-      { status: 500 }
-    );
-  }
+ } catch (e: unknown) {
+  const message = e instanceof Error ? e.message : "Something went wrong";
+  return Response.json({ error: message }, { status: 500 });
+}
 }

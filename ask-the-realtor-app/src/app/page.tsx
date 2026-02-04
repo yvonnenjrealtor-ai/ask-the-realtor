@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 import { useEffect, useMemo, useState } from "react";
 
@@ -231,11 +232,12 @@ export default function Page() {
       }
 
       setRawAnswer(data?.answer ?? "");
-    } catch (e: any) {
-      setError(e?.message || "Something went wrong. Please try again.");
-    } finally {
-      setLoading(false);
-    }
+   } catch (e: unknown) {
+  setError(e instanceof Error ? e.message : "Something went wrong. Please try again.");
+} finally {
+  setLoading(false);
+}
+
   }
 
   const examples = [
@@ -258,7 +260,7 @@ export default function Page() {
             </div>
 
             <h1 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-  Ask the Realtor
+  Talk to <span className="italic">THE</span> Realtor
 </h1>
 <p className="mt-2 max-w-2xl text-base leading-relaxed text-slate-600">
   Professional guidance with a little Jersey-savvy—fast, clear, and actually useful.
@@ -448,14 +450,14 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
 
           {/* RIGHT */}
           <aside className="space-y-6">
-  {/* Work with Yvonne panel */}
+ {/* Work with Yvonne panel */}
 <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-xl shadow-slate-900/5">
   <div className="flex items-start justify-between gap-3">
     <div>
-     <h3 className="text-base font-semibold text-slate-900">Work with Yvonne</h3>
-<p className="mt-1 text-sm leading-relaxed text-slate-600">
-  I’ve devoted my career to being resourceful, strategic, and transparent—so you can make confident real estate decisions without pressure.
-</p>
+      <h3 className="text-base font-semibold text-slate-900">Work with Yvonne</h3>
+      <p className="mt-1 text-sm leading-relaxed text-slate-600">
+        I’ve devoted my career to being resourceful, strategic, and transparent—so you can make confident real estate decisions without pressure.
+      </p>
     </div>
 
     <span className="shrink-0 rounded-full border border-yellow-200 bg-yellow-100 px-3 py-1 text-xs font-semibold text-slate-900">
@@ -500,6 +502,8 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
     </div>
   </div>
 </section>
+
+
 
 
             {/* Recently asked */}
@@ -613,7 +617,7 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
             </section>
 
            <footer className="text-xs text-slate-500">
-  © {new Date().getFullYear()} Ask the Realtor •{" "}
+  © {new Date().getFullYear()} Talk to THE Realtor •{" "}
   <a
     href="/privacy"
     className="underline hover:text-slate-700"
@@ -621,8 +625,9 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
     Privacy & Disclaimer
   </a>
 </footer>
+
 </aside>
-        </main>
+</main>
       </div>
     </div>
   );
