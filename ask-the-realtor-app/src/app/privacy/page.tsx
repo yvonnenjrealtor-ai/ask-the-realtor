@@ -6,9 +6,9 @@ export default function PrivacyPage() {
       <div className="mx-auto max-w-3xl px-4 py-12">
         <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-8">
           <div className="flex items-start justify-between gap-4">
-            <h1 className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">
-              Privacy & Disclaimer
-            </h1>
+            <h1 className="text-2xl font-extrabold tracking-tight text-slate-900">
+  Privacy & Disclaimer — Talk to THE Realtor™
+</h1>
 
             <Link
               href="/"
@@ -19,7 +19,7 @@ export default function PrivacyPage() {
           </div>
 
           <p className="mt-4 text-slate-700 leading-relaxed">
-            Talk to THE Realtor is built to help you make smarter real estate decisions with clarity and confidence.
+            Talk to THE Realtor™ is built to help you make smarter real estate decisions with clarity and confidence.
             Your trust matters.
           </p>
 

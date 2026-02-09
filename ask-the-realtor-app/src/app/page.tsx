@@ -617,11 +617,8 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
             </section>
 
            <footer className="text-xs text-slate-500">
-  © {new Date().getFullYear()} Talk to THE Realtor •{" "}
-  <a
-    href="/privacy"
-    className="underline hover:text-slate-700"
-  >
+  © {new Date().getFullYear()} Talk to THE Realtor™ •{" "}
+  <a href="/privacy" className="underline hover:text-slate-700">
     Privacy & Disclaimer
   </a>
 </footer>
