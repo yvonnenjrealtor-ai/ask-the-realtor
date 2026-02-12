@@ -618,8 +618,8 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
 
            <footer className="mt-8 text-xs text-slate-500 leading-relaxed space-y-2">
   <div>
-    <strong>Yvonne Sanford</strong>, Licensed NJ Real Estate Salesperson<br />
-    Brokered by [Weichert Realtors]<br />
+    <strong>Yvonne Sanford</strong>, Licensed NJ Real Estate Broker-Salesperson<br />
+    Brokered by Weichert Realtors<br />
     Equal Housing Opportunity
   </div>
 
