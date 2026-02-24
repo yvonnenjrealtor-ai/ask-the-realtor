@@ -616,10 +616,13 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
               </div>
             </section>
 
-           <footer className="mt-8 text-xs text-slate-500 leading-relaxed space-y-2">
+<footer className="mt-8 text-xs text-slate-500 leading-relaxed space-y-3">
+
   <div>
-    <strong>Yvonne Sanford</strong>, Licensed NJ Real Estate Broker-Salesperson<br />
-    Brokered by Weichert Realtors<br />
+    <strong>Yvonne Sanford</strong>, Licensed NJ Broker-Salesperson<br />
+    Weichert Realtors<br />
+    505 Millburn Avenue<br />
+    Short Hills, NJ 07078<br />
     Equal Housing Opportunity
   </div>
 
@@ -629,14 +632,7 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
   </div>
 
   <div>
-    © {new Date().getFullYear()} Talk to THE Realtor™. All rights reserved.
+    © {new Date().getFullYear()} Yvonne Sanford. All rights reserved.
   </div>
-</footer>
 
-</aside>
-</main>
-      </div>
-    </div>
-  );
-}
-  
+</footer>
