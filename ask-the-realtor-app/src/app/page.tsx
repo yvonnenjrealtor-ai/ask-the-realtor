@@ -616,23 +616,35 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
               </div>
             </section>
 
-<footer className="mt-8 text-xs text-slate-500 leading-relaxed space-y-3">
+              <footer className="mt-8 space-y-2 text-xs leading-relaxed text-slate-500">
+                <div>
+                  <strong>Yvonne Sanford</strong>, Licensed NJ Broker-Salesperson
+                  <br />
+                  Weichert Realtors
+                  <br />
+                  505 Millburn Avenue
+                  <br />
+                  Short Hills, NJ 07078
+                  <br />
+                  Equal Housing Opportunity
+                </div>
 
-  <div>
-    <strong>Yvonne Sanford</strong>, Licensed NJ Broker-Salesperson<br />
-    Weichert Realtors<br />
-    505 Millburn Avenue<br />
-    Short Hills, NJ 07078<br />
-    Equal Housing Opportunity
-  </div>
+                <div>
+                  Talk to THE Realtor™ provides general educational information only and does not create an agency relationship.
+                  Formal representation requires a written agreement and delivery of the NJ Consumer Information Statement.
+                </div>
 
-  <div>
-    Talk to THE Realtor™ provides general educational information only and does not create an agency relationship.
-    Formal representation requires a written agreement and delivery of the NJ Consumer Information Statement.
-  </div>
+                <div>© {new Date().getFullYear()} Talk to THE Realtor™. All rights reserved.</div>
 
-  <div>
-    © {new Date().getFullYear()} Yvonne Sanford. All rights reserved.
-  </div>
-
-</footer>
+                <div>
+                  <a href="/privacy" className="underline hover:text-slate-700">
+                    Privacy & Disclaimer
+                  </a>
+                </div>
+              </footer>
+            </aside>
+          </main>
+        </div>
+      </div>
+  );
+}
