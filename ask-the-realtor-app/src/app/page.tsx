@@ -132,6 +132,17 @@ function IconSteps() {
 }
 
 export default function Page() {
+  const [showDisclaimer, setShowDisclaimer] = useState(true);
+
+useEffect(() => {
+  const accepted = localStorage.getItem("aiDisclaimerAccepted");
+  if (accepted) setShowDisclaimer(false);
+}, []);
+
+const acceptDisclaimer = () => {
+  localStorage.setItem("aiDisclaimerAccepted", "true");
+  setShowDisclaimer(false);
+};
   const [question, setQuestion] = useState("");
   const [location, setLocation] = useState("New Jersey");
   const [tone, setTone] = useState<Tone>("Professional (Savvy)");
@@ -248,6 +259,32 @@ export default function Page() {
   ];
 
   return (
+    <>
+  {showDisclaimer && (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+      <div className="max-w-md rounded-lg bg-white p-6 text-sm shadow-lg">
+        <h2 className="mb-2 text-lg font-semibold">Important Disclosure</h2>
+
+        <p className="mb-3">
+          This application uses artificial intelligence (AI) to generate responses.
+          Information provided is for general informational purposes only and should
+          not be relied upon as legal, financial, tax, or real estate advice.
+        </p>
+
+        <p className="mb-3">
+          No agency relationship is created through use of this application.
+          Users should independently verify all information.
+        </p>
+
+        <button
+          onClick={acceptDisclaimer}
+          className="mt-2 w-full rounded bg-yellow-400 py-2 font-medium text-black"
+        >
+          I Understand & Continue
+        </button>
+      </div>
+    </div>
+  )}
    <div className="min-h-screen bg-slate-50 text-slate-900 [text-rendering:optimizeLegibility]">
       <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(244,196,48,0.18),transparent_40%),radial-gradient(circle_at_80%_20%,rgba(15,23,42,0.10),transparent_45%)]" />
 
@@ -646,5 +683,6 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
           </main>
         </div>
       </div>
+  </>
   );
 }
