@@ -1,20 +1,21 @@
-{
-  "name": "Talk to THE Realtor",
-  "short_name": "THE Realtor",
-  "display": "standalone",
-  "start_url": "/",
-  "background_color": "#ffffff",
-  "theme_color": "#0f172a",
-  "icons": [
-    {
-      "src": "/Icons/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/Icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
-}
+{showDisclaimer && (
+  <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+    <div className="bg-white max-w-md p-6 rounded-lg shadow-lg text-sm">
+      <h2 className="text-lg font-semibold mb-2">Important Disclosure</h2>
+      <p className="mb-3">
+        This application uses artificial intelligence (AI) to generate responses.
+        Information provided is for general informational purposes only and should not be relied upon as legal, financial, tax, or real estate advice.
+      </p>
+      <p className="mb-3">
+        No agency relationship is created through use of this application.
+        Users should independently verify all information.
+      </p>
+      <button
+        onClick={acceptDisclaimer}
+        className="mt-2 w-full bg-yellow-400 text-black py-2 rounded font-medium"
+      >
+        I Understand & Continue
+      </button>
+    </div>
+  </div>
+)}
