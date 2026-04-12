@@ -659,26 +659,47 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
                   <br />
                   Weichert Realtors
                   <br />
-                  505 Millburn Avenue
-                  <br />
-                  Short Hills, NJ 07078
-                  <br />
-                  Equal Housing Opportunity
-                </div>
+                  <footer className="mt-10 border-t border-slate-200 pt-6 text-xs text-slate-600">
+  <div className="space-y-2">
 
-                <div>
-                  Talk to THE Realtor™ provides general educational information only and does not create an agency relationship.
-                  Formal representation requires a written agreement and delivery of the NJ Consumer Information Statement.
-                </div>
+    <div className="font-semibold text-slate-900">
+      Yvonne Sanford, Broker-Associate
+    </div>
 
-                <div>© {new Date().getFullYear()} Talk to THE Realtor™. All rights reserved.</div>
+    <div>
+      Weichert Realtors®
+    </div>
 
-                <div>
-                  <a href="/privacy" className="underline hover:text-slate-700">
-                    Privacy & Disclaimer
-                  </a>
-                </div>
-              </footer>
+    <div>
+      505 Millburn Avenue, Short Hills, NJ 07078
+    </div>
+
+    <div>
+      Office: (973) 376-4545
+    </div>
+
+    <div className="mt-3">
+      Equal Housing Opportunity
+    </div>
+
+    <div className="mt-3">
+      This application provides general real estate information for educational purposes only and does not constitute legal, tax, or financial advice.
+    </div>
+
+    <div>
+      No agency relationship is created through use of this application.
+    </div>
+
+    <div>
+      Information may be generated using artificial intelligence and should be independently verified.
+    </div>
+
+    <div className="mt-3">
+      © {new Date().getFullYear()} Chat Homes AI with Yvonne Sanford
+    </div>
+
+  </div>
+</footer>
             </aside>
           </main>
         </div>
