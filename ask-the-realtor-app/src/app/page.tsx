@@ -724,8 +724,8 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
     </div>
 
     <div className="mt-3">
-      © {new Date().getFullYear()} Chat Homes AI with Yvonne Sanford
-    </div>
+  {"©"} {new Date().getFullYear()} Chat Homes AI with Yvonne Sanford
+</div>
   </div>
 </footer>
 </aside>
