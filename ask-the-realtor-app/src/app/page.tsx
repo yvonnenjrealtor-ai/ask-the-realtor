@@ -693,12 +693,6 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
     <div>
       Information may be generated using artificial intelligence and should be independently verified.
     </div>
-
-    <div className="mt-3">
-      © {new Date().getFullYear()} Chat Homes AI with Yvonne Sanford
-    </div>
-
-  </div>
 <footer className="mt-10 border-t border-slate-200 pt-6 text-xs text-slate-600">
   <div className="space-y-2">
     <div className="font-semibold text-slate-900">
@@ -706,33 +700,27 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
     </div>
 
     <div>Weichert Realtors®</div>
-<footer className="mt-10 border-t border-slate-200 pt-6 text-xs text-slate-600">
-  <div className="space-y-2">
-    <div className="font-semibold text-slate-900">
-      Yvonne Sanford, Broker-Associate
-    </div>
-</footer>
-    <div>Weichert Realtors®</div>
-<footer className="mt-10 border-t border-slate-200 pt-6 text-xs text-slate-600">
-  <div className="space-y-2">
 
     <div>505 Millburn Avenue, Short Hills, NJ 07078</div>
+
     <div>Office: (973) 376-4545</div>
 
     <div className="mt-3">Equal Housing Opportunity</div>
 
     <div className="mt-3">
-      This application provides general real estate information...
+      This application provides general real estate information for educational purposes only and does not constitute legal, tax, or financial advice.
     </div>
 
-    <div>No agency relationship is created...</div>
+    <div>No agency relationship is created through use of this application.</div>
 
-    <div>Information may be generated...</div>
+    <div>
+      Information may be generated using artificial intelligence and should be independently verified.
+    </div>
 
     <div className="mt-3">
       {"©"} {new Date().getFullYear()} Chat Homes AI with Yvonne Sanford
     </div>
-
+    
   </div>
 </footer>
 
