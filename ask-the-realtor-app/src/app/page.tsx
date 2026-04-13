@@ -293,14 +293,22 @@ const acceptDisclaimer = () => {
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-slate-700 shadow-sm">
               <span className="h-2 w-2 rounded-full bg-yellow-400" />
-              Real estate clarity — minus the chaos
-            </div>
+            <div>
+    Chat Homes AI
+  </div>
 
-            <h1 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-  Talk to <span className="italic">THE</span> Realtor
-</h1>
-<p className="mt-2 max-w-2xl text-base leading-relaxed text-slate-600">
-  Professional guidance with a little Jersey-savvy—fast, clear, and actually useful.
+  <h1 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+    Chat Homes AI
+  </h1>
+
+  <p className="mt-2 text-base text-slate-600">
+    by Yvonne Sanford
+  </p>
+
+  <p className="mt-2 max-w-2xl text-base leading-relaxed text-slate-600">
+    Smart, guided real estate answers for New Jersey buyers and sellers.
+  </p>
+</div>
 </p>
 
           </div>
