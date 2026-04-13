@@ -516,7 +516,8 @@ href="https://blinq.me/pEhYxpoPsDCh?bs=db"
       Tap to connect instantly
     </p>
   </div>
-</section>    <h3 className="text-base font-semibold text-slate-900">Recently asked</h3>
+</section>    
+          <h3 className="text-base font-semibold text-slate-900">Recently asked</h3>
     <p className="mt-1 text-sm text-slate-600">
       A quick way to revisit what people are asking.
     </p>
