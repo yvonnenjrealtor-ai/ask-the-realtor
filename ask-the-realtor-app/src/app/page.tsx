@@ -592,11 +592,13 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
 
   <footer className="mt-10 border-t border-slate-200 pt-6 text-xs text-slate-600">
     <div className="space-y-2">
-      <div className="font-semibold text-slate-900">
-        Yvonne Sanford, Broker-Associate
-      </div>
+     <div className="font-semibold text-slate-900">
+  Yvonne Sanford, Broker-Associate
+</div>
 
-      <div>Weichert Realtors®</div>
+<div className="font-semibold text-slate-900">
+  Weichert Realtors®
+</div>
 
       <div>505 Millburn Avenue, Short Hills, NJ 07078</div>
 
