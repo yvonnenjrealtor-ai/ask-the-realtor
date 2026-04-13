@@ -504,7 +504,7 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
 
   <div className="mt-4 space-y-3">
     <a
-      href="https://blinq.me/pEhYxpoPsDCh?bs=db
+href="https://blinq.me/pEhYxpoPsDCh?bs=db"      
       target="_blank"
       rel="noreferrer"
       className="inline-flex w-full items-center justify-center rounded-xl bg-yellow-400 px-4 py-3 text-sm font-semibold text-black shadow-sm hover:bg-yellow-500 transition"
