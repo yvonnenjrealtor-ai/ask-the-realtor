@@ -519,7 +519,7 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
     </a>
 
     <p className="text-center text-xs text-slate-500">
-      Tap the card to open my digital contact card
+      Tap the card to book a call with me
     </p>
   </div>
 </section>
