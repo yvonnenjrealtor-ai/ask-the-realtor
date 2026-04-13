@@ -295,8 +295,8 @@ const acceptDisclaimer = () => {
               <span className="h-2 w-2 rounded-full bg-yellow-400" />
             <div>
     Chat Homes AI
-  </div>
-
+            </div>  
+            </div>
   <h1 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
     Chat Homes AI
   </h1>
