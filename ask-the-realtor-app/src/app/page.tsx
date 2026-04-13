@@ -537,11 +537,11 @@ href="https://blinq.me/pEhYxpoPsDCh?bs=db"
             <div className="text-sm font-medium text-slate-900">{item.question}</div>
             <div className="mt-1 text-xs text-slate-500">
               {item.location} • {item.tone}
-            </div>
-          </button>
-        ))
-      )}
-    </div>
+           </div>
+         </button>
+       ))
+     )}
+   </div>
   </section>
 
   <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
