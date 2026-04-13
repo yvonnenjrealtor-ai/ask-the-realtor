@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata = {
-  title: "Talk to THE Realtor",
-  applicationName: "THE Realtor",
+  title: "Chat Homes AI | Yvonne Sanford",
+  description: "Smart, guided real estate answers for New Jersey buyers and sellers.",
+  applicationName: "Chat Homes AI",
   appleWebApp: {
-    title: "THE Realtor",
+    title: "Chat Homes AI",
     capable: true,
   },
   manifest: "/manifest.json",
