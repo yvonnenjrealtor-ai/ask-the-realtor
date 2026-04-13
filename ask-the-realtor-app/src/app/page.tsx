@@ -486,244 +486,101 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
           </section>
 
           {/* RIGHT */}
-          <aside className="space-y-6">
- {/* Work with Yvonne panel */}
-<section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-xl shadow-slate-900/5">
-  <div className="flex items-start justify-between gap-3">
-    <div>
-      <h3 className="text-base font-semibold text-slate-900">Work with Yvonne</h3>
-      <p className="mt-1 text-sm leading-relaxed text-slate-600">
-        I’ve devoted my career to being resourceful, strategic, and transparent—so you can make confident real estate decisions without pressure.
-      </p>
+        <aside className="space-y-6">
+  <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <h3 className="text-base font-semibold text-slate-900">Recently asked</h3>
+    <p className="mt-1 text-sm text-slate-600">
+      A quick way to revisit what people are asking.
+    </p>
+
+    <div className="mt-4 space-y-3">
+      {recent.length === 0 ? (
+        <div className="rounded-xl bg-slate-50 p-4 text-sm text-slate-500">
+          No recent questions yet.
+        </div>
+      ) : (
+        recent.map((item) => (
+          <button
+            key={item.id}
+            onClick={() => loadRecent(item)}
+            className="w-full rounded-xl border border-slate-200 bg-white p-4 text-left shadow-sm hover:bg-slate-50"
+          >
+            <div className="text-sm font-medium text-slate-900">{item.question}</div>
+            <div className="mt-1 text-xs text-slate-500">
+              {item.location} • {item.tone}
+            </div>
+          </button>
+        ))
+      )}
     </div>
+  </section>
 
-    <span className="shrink-0 rounded-full border border-yellow-200 bg-yellow-100 px-3 py-1 text-xs font-semibold text-slate-900">
-      Verified Realtor
-    </span>
-  </div>
+  <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <h3 className="text-base font-semibold text-slate-900">Saved answers</h3>
+    <p className="mt-1 text-sm text-slate-600">
+      Because nobody remembers everything after the conversation ends.
+    </p>
 
-  <div className="mt-4 rounded-2xl border border-slate-200 bg-slate-50 p-4">
-    <div className="flex items-center justify-between gap-3">
+    <div className="mt-4 space-y-3">
+      {saved.length === 0 ? (
+        <div className="rounded-xl bg-slate-50 p-4 text-sm text-slate-500">
+          Ask a question, then click <strong>Save this answer</strong>.
+        </div>
+      ) : (
+        saved.map((item) => (
+          <button
+            key={item.id}
+            onClick={() => loadSaved(item)}
+            className="w-full rounded-xl border border-slate-200 bg-white p-4 text-left shadow-sm hover:bg-slate-50"
+          >
+            <div className="text-sm font-medium text-slate-900">{item.question}</div>
+            <div className="mt-1 text-xs text-slate-500">
+              {item.location} • {item.tone}
+            </div>
+          </button>
+        ))
+      )}
+    </div>
+  </section>
+
+  <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <h3 className="text-base font-semibold text-slate-900">How it works</h3>
+    <div className="mt-4 space-y-4 text-sm text-slate-700">
+      <div>1. Ask your question like you would in a real consult.</div>
+      <div>2. Default area is New Jersey. Adjust if needed.</div>
+      <div>3. Get the answer + watch-outs + next steps.</div>
+    </div>
+  </section>
+
+  <footer className="mt-10 border-t border-slate-200 pt-6 text-xs text-slate-600">
+    <div className="space-y-2">
+      <div className="font-semibold text-slate-900">
+        Yvonne Sanford, Broker-Associate
+      </div>
+
+      <div>Weichert Realtors®</div>
+
+      <div>505 Millburn Avenue, Short Hills, NJ 07078</div>
+
+      <div>Office: (973) 376-4545</div>
+
+      <div className="mt-3">Equal Housing Opportunity</div>
+
+      <div className="mt-3">
+        This application provides general real estate information for educational purposes only and does not constitute legal, tax, or financial advice.
+      </div>
+
+      <div>No agency relationship is created through use of this application.</div>
+
       <div>
-        <div className="text-sm font-semibold text-slate-900">Book a call with Yvonne</div>
-        <div className="mt-1 text-sm text-slate-700">
-          Tap the QR to open my Blinq contact card and reach me directly.
-        </div>
-        <div className="mt-2 text-xs text-slate-600">
-          Mobile: tap • Desktop: click
-        </div>
+        Information may be generated using artificial intelligence and should be independently verified.
       </div>
 
-      <a
-        href="https://blinq.me/pEhYxpoPsDCh?bs=db"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Open Yvonne Sanford's Blinq contact card"
-        title="Open my contact card"
-        className="group"
-      >
-        <div className="h-28 w-28 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition group-hover:shadow-md">
-          <img
-            src="/blinq-qr.png"
-            alt="Tap or click to open Yvonne Sanford's Blinq contact card"
-            className="h-full w-full object-contain p-2"
-          />
-        </div>
-      </a>
-    </div>
-
-    <div className="mt-4 grid gap-2">
-      <div className="rounded-xl border border-slate-200 bg-white p-3 text-sm text-slate-700">
-        <span className="font-semibold text-slate-900">What you’ll get:</span> strategy, clarity, and a clean plan—no pressure.
+      <div className="mt-3">
+        {"©"} {new Date().getFullYear()} Chat Homes AI with Yvonne Sanford
       </div>
     </div>
-  </div>
-</section>
-
-
-
-
-            {/* Recently asked */}
-            <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-xl shadow-slate-900/5">
-              <div className="flex items-center justify-between">
-                <h3 className="text-base font-semibold text-slate-900">Recently asked</h3>
-                <button
-                  className="text-xs font-semibold text-slate-700 hover:text-slate-900"
-                  onClick={() => setRecent([])}
-                  disabled={recent.length === 0}
-                >
-                  Clear
-                </button>
-              </div>
-              <p className="mt-1 text-sm text-slate-600">
-               A quick way to revisit what people are asking (and what you might be wondering too).
-              </p>
-
-              <div className="mt-4 space-y-2">
-                {recent.length === 0 ? (
-                  <div className="rounded-xl bg-slate-50 p-4 text-sm text-slate-600">
-                    Ask your first question and it’ll show up here.
-                  </div>
-                ) : (
-                  recent.map((item) => (
-                    <button
-                      key={item.id}
-                      onClick={() => loadRecent(item)}
-                      className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-left text-sm text-slate-700 shadow-sm hover:bg-slate-50"
-                      title="Click to load this question"
-                    >
-                      <div className="font-semibold text-slate-900 line-clamp-2">{item.question}</div>
-                      <div className="mt-1 text-xs text-slate-500">
-                        {item.location} • {item.tone}
-                      </div>
-                    </button>
-                  ))
-                )}
-              </div>
-            </section>
-
-            {/* Saved answers */}
-            <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-xl shadow-slate-900/5">
-              <div className="flex items-center justify-between">
-                <h3 className="text-base font-semibold text-slate-900">Saved answers</h3>
-                <button
-                  className="text-xs font-semibold text-slate-700 hover:text-slate-900"
-                  onClick={() => setSaved([])}
-                  disabled={saved.length === 0}
-                >
-                  Clear
-                </button>
-              </div>
-              <p className="mt-1 text-sm text-slate-600">
-                Because nobody remembers everything after the conversation ends.
-              </p>
-
-              <div className="mt-4 space-y-2">
-                {saved.length === 0 ? (
-                  <div className="rounded-xl bg-slate-50 p-4 text-sm text-slate-600">
-                    Ask a question, then click <span className="font-semibold text-slate-900">Save this answer</span>.
-                  </div>
-                ) : (
-                  saved.map((item) => (
-                    <button
-                      key={item.id}
-                      onClick={() => loadSaved(item)}
-                      className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-left text-sm text-slate-700 shadow-sm hover:bg-slate-50"
-                      title="Click to load this saved answer"
-                    >
-                      <div className="font-semibold text-slate-900 line-clamp-2">{item.question}</div>
-                      <div className="mt-1 text-xs text-slate-500">
-                        Saved • {item.location} • {item.tone}
-                      </div>
-                    </button>
-                  ))
-                )}
-              </div>
-            </section>
-
-            {/* How it works + guardrails */}
-            <section id="how" className="rounded-2xl border border-slate-200 bg-white p-5 shadow-xl shadow-slate-900/5">
-              <h3 className="text-base font-semibold text-slate-900">How it works</h3>
-              <ol className="mt-3 space-y-3 text-sm text-slate-700">
-                <li className="flex gap-3">
-                  <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-slate-900 text-xs font-bold text-white">
-                    1
-                  </span>
-                  <span>Ask your question like you would in a real consult.</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-slate-900 text-xs font-bold text-white">
-                    2
-                  </span>
-                  <span>Default area is New Jersey. Adjust if needed.</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-slate-900 text-xs font-bold text-white">
-                    3
-                  </span>
-                  <span>Get the answer + watch-outs + next steps (so it’s actionable).</span>
-                </li>
-              </ol>
-
-              <div className="mt-4 rounded-xl bg-slate-50 p-4 text-sm text-slate-700">
-                <div className="font-semibold text-slate-900">Guardrails</div>
-                <div className="mt-1">
-                  Educational guidance only—consult a NJ attorney for legal matters and a licensed loan officer for financing decisions.
-                </div>
-              </div>
-            </section>
-
-              <footer className="mt-8 space-y-2 text-xs leading-relaxed text-slate-500">
-                <div>
-                  <strong>Yvonne Sanford</strong>, Licensed NJ Broker-Salesperson
-                  <br />
-                  Weichert Realtors
-                  <br />
-                  <footer className="mt-10 border-t border-slate-200 pt-6 text-xs text-slate-600">
-  <div className="space-y-2">
-
-    <div className="font-semibold text-slate-900">
-      Yvonne Sanford, Broker-Associate
-    </div>
-
-    <div>
-      Weichert Realtors®
-    </div>
-
-    <div>
-      505 Millburn Avenue, Short Hills, NJ 07078
-    </div>
-
-    <div>
-      Office: (973) 376-4545
-    </div>
-
-    <div className="mt-3">
-      Equal Housing Opportunity
-    </div>
-
-    <div className="mt-3">
-      This application provides general real estate information for educational purposes only and does not constitute legal, tax, or financial advice.
-    </div>
-
-    <div>
-      No agency relationship is created through use of this application.
-    </div>
-
-    <div>
-      Information may be generated using artificial intelligence and should be independently verified.
-    </div>
-<footer className="mt-10 border-t border-slate-200 pt-6 text-xs text-slate-600">
-  <div className="space-y-2">
-    <div className="font-semibold text-slate-900">
-      Yvonne Sanford, Broker-Associate
-    </div>
-
-    <div>Weichert Realtors®</div>
-
-    <div>505 Millburn Avenue, Short Hills, NJ 07078</div>
-
-    <div>Office: (973) 376-4545</div>
-
-    <div className="mt-3">Equal Housing Opportunity</div>
-
-    <div className="mt-3">
-      This application provides general real estate information for educational purposes only and does not constitute legal, tax, or financial advice.
-    </div>
-
-    <div>No agency relationship is created through use of this application.</div>
-
-    <div>
-      Information may be generated using artificial intelligence and should be independently verified.
-    </div>
-
-    <div className="mt-3">
-      {"©"} {new Date().getFullYear()} Chat Homes AI with Yvonne Sanford
-    </div>
-    
-  </div>
-</footer>
-
+  </footer>
 </aside>
 </main>
 </div>
