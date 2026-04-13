@@ -711,124 +711,31 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
     <div className="font-semibold text-slate-900">
       Yvonne Sanford, Broker-Associate
     </div>
-
+</footer>
     <div>Weichert Realtors®</div>
+<footer className="mt-10 border-t border-slate-200 pt-6 text-xs text-slate-600">
+  <div className="space-y-2">
 
     <div>505 Millburn Avenue, Short Hills, NJ 07078</div>
-
     <div>Office: (973) 376-4545</div>
 
     <div className="mt-3">Equal Housing Opportunity</div>
 
     <div className="mt-3">
-      This application provides general real estate information for educational purposes only and does not constitute legal, tax, or financial advice.
+      This application provides general real estate information...
     </div>
 
-    <div>No agency relationship is created through use of this application.</div>
+    <div>No agency relationship is created...</div>
 
-    <div>
-      Information may be generated using artificial intelligence and should be independently verified.
-    </div>
+    <div>Information may be generated...</div>
 
     <div className="mt-3">
       {"©"} {new Date().getFullYear()} Chat Homes AI with Yvonne Sanford
     </div>
+
   </div>
-<aside className="space-y-6">
-  <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-    <h3 className="text-base font-semibold text-slate-900">Recently asked</h3>
-    <p className="mt-1 text-sm text-slate-600">
-      A quick way to revisit what people are asking.
-    </p>
+</footer>
 
-    <div className="mt-4 space-y-3">
-      {recent.length === 0 ? (
-        <div className="rounded-xl bg-slate-50 p-4 text-sm text-slate-500">
-          No recent questions yet.
-        </div>
-      ) : (
-        recent.map((item) => (
-          <button
-            key={item.id}
-            onClick={() => loadRecent(item)}
-            className="w-full rounded-xl border border-slate-200 bg-white p-4 text-left shadow-sm hover:bg-slate-50"
-          >
-            <div className="text-sm font-medium text-slate-900">{item.question}</div>
-            <div className="mt-1 text-xs text-slate-500">
-              {item.location} • {item.tone}
-            </div>
-          </button>
-        ))
-      )}
-    </div>
-  </section>
-
-  <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-    <h3 className="text-base font-semibold text-slate-900">Saved answers</h3>
-    <p className="mt-1 text-sm text-slate-600">
-      Because nobody remembers everything after the conversation ends.
-    </p>
-
-    <div className="mt-4 space-y-3">
-      {saved.length === 0 ? (
-        <div className="rounded-xl bg-slate-50 p-4 text-sm text-slate-500">
-          Ask a question, then click <strong>Save this answer</strong>.
-        </div>
-      ) : (
-        saved.map((item) => (
-          <button
-            key={item.id}
-            onClick={() => loadSaved(item)}
-            className="w-full rounded-xl border border-slate-200 bg-white p-4 text-left shadow-sm hover:bg-slate-50"
-          >
-            <div className="text-sm font-medium text-slate-900">{item.question}</div>
-            <div className="mt-1 text-xs text-slate-500">
-              {item.location} • {item.tone}
-            </div>
-          </button>
-        ))
-      )}
-    </div>
-  </section>
-
-  <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-    <h3 className="text-base font-semibold text-slate-900">How it works</h3>
-    <div className="mt-4 space-y-4 text-sm text-slate-700">
-      <div>1. Ask your question like you would in a real consult.</div>
-      <div>2. Default area is New Jersey. Adjust if needed.</div>
-      <div>3. Get the answer + watch-outs + next steps.</div>
-    </div>
-  </section>
-
-  <footer className="mt-10 border-t border-slate-200 pt-6 text-xs text-slate-600">
-    <div className="space-y-2">
-      <div className="font-semibold text-slate-900">
-        Yvonne Sanford, Broker-Associate
-      </div>
-
-      <div>Weichert Realtors®</div>
-
-      <div>505 Millburn Avenue, Short Hills, NJ 07078</div>
-
-      <div>Office: (973) 376-4545</div>
-
-      <div className="mt-3">Equal Housing Opportunity</div>
-
-      <div className="mt-3">
-        This application provides general real estate information for educational purposes only and does not constitute legal, tax, or financial advice.
-      </div>
-
-      <div>No agency relationship is created through use of this application.</div>
-
-      <div>
-        Information may be generated using artificial intelligence and should be independently verified.
-      </div>
-
-      <div className="mt-3">
-        {"©"} {new Date().getFullYear()} Chat Homes AI with Yvonne Sanford
-      </div>
-    </div>
-  </footer>
 </aside>
 </main>
 </div>
