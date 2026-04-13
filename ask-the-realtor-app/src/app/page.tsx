@@ -494,29 +494,35 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
           {/* RIGHT */}
        <aside className="space-y-6">
   <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-    <h3 className="text-base font-semibold text-slate-900">
-      Connect with Yvonne Sanford
-    </h3>
+  <h3 className="text-base font-semibold text-slate-900">
+    Connect with Yvonne Sanford
+  </h3>
 
-    <p className="mt-1 text-sm text-slate-600">
-      Direct access for guidance, showings, and next steps.
+  <p className="mt-1 text-sm text-slate-600">
+    Direct access for guidance, showings, and next steps.
+  </p>
+
+  <div className="mt-4 space-y-3">
+    <a
+      href="https://blinq.me/pEhYxpoPsDCh?bs=db"
+      target="_blank"
+      rel="noreferrer"
+      className="block"
+    >
+      <Image
+        src="/blinq-qr.png"
+        alt="Yvonne Sanford digital contact card"
+        width={600}
+        height={360}
+        className="w-full rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition"
+      />
+    </a>
+
+    <p className="text-center text-xs text-slate-500">
+      Tap the card to open my digital contact card
     </p>
-
-    <div className="mt-4 space-y-3">
-      <a
-        href="https://blinq.me/pEhYxpoPsDCh?bs=db"
-        target="_blank"
-        rel="noreferrer"
-        className="inline-flex w-full items-center justify-center rounded-xl bg-yellow-400 px-4 py-3 text-sm font-semibold text-black shadow-sm hover:bg-yellow-500 transition"
-      >
-        Open Digital Contact Card
-      </a>
-
-      <p className="text-center text-xs text-slate-500">
-        Tap to connect instantly
-      </p>
-    </div>
-  </section>
+  </div>
+</section>
 
   <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
     <h3 className="text-base font-semibold text-slate-900">Recently asked</h3>
