@@ -309,9 +309,7 @@ const acceptDisclaimer = () => {
     Smart, guided real estate answers for New Jersey buyers and sellers.
   </p>
 </div>
-</p>
 
-          </div>
 
           <div className="mt-2 flex gap-2 sm:mt-0">
             <a
