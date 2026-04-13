@@ -493,8 +493,30 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
 
           {/* RIGHT */}
         <aside className="space-y-6">
-  <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-    <h3 className="text-base font-semibold text-slate-900">Recently asked</h3>
+            <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+  <h3 className="text-base font-semibold text-slate-900">
+    Connect with Yvonne Sanford
+  </h3>
+
+  <p className="mt-1 text-sm text-slate-600">
+    Direct access for guidance, showings, and next steps.
+  </p>
+
+  <div className="mt-4 space-y-3">
+    <a
+      href="https://blinq.me/pEhYxpoPsDCh?bs=db
+      target="_blank"
+      rel="noreferrer"
+      className="inline-flex w-full items-center justify-center rounded-xl bg-yellow-400 px-4 py-3 text-sm font-semibold text-black shadow-sm hover:bg-yellow-500 transition"
+    >
+      Open Digital Contact Card
+    </a>
+
+    <p className="text-xs text-slate-500 text-center">
+      Tap to connect instantly
+    </p>
+  </div>
+</section>    <h3 className="text-base font-semibold text-slate-900">Recently asked</h3>
     <p className="mt-1 text-sm text-slate-600">
       A quick way to revisit what people are asking.
     </p>
