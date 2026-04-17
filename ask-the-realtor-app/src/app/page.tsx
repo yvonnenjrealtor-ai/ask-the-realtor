@@ -365,9 +365,7 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
     className="mt-2 w-full rounded-xl border border-slate-300 px-3 py-2"
   />
 
-  <button className="mt-3 w-full rounded-xl bg-yellow-500 text-black py-2 font-semibold">
-    Get My Answer
-  </button>
+  
 
   <p className="text-xs text-slate-500 mt-2">
     No spam. No pressure. Just smart guidance.
@@ -375,7 +373,7 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
 </div>              </div>
 
               <label className="text-sm font-medium text-slate-800">
-                Your question
+                Step 1: Your question
                 <textarea
                   value={question}
                   onChange={(e) => setQuestion(e.target.value)}
@@ -420,7 +418,7 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
                       Working it out like a Realtor…
                     </>
                   ) : (
-                    "Ask"
+                    "Get My Answer"
                   )}
                 </button>
 
