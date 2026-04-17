@@ -340,7 +340,39 @@ const acceptDisclaimer = () => {
                 <p className="text-sm text-slate-600">
 Ask it like you would in a consult. I’ll answer like a pro—clear, direct, and actionable.
                 </p>
-              </div>
+             
+              <div className="mb-6 p-4 border rounded-xl bg-white">
+  <h3 className="text-md font-semibold text-slate-900">
+    Get Your Personalized Real Estate Guidance
+  </h3>
+
+  <p className="text-sm text-slate-600 mb-3">
+    Powered by AI. Backed by Yvonne Sanford.
+  </p>
+
+  <input
+    placeholder="First Name"
+    className="mt-2 w-full rounded-xl border border-slate-300 px-3 py-2"
+  />
+
+  <input
+    placeholder="Email"
+    className="mt-2 w-full rounded-xl border border-slate-300 px-3 py-2"
+  />
+
+  <input
+    placeholder="Phone (optional)"
+    className="mt-2 w-full rounded-xl border border-slate-300 px-3 py-2"
+  />
+
+  <button className="mt-3 w-full rounded-xl bg-yellow-500 text-black py-2 font-semibold">
+    Get My Answer
+  </button>
+
+  <p className="text-xs text-slate-500 mt-2">
+    No spam. No pressure. Just smart guidance.
+  </p>
+</div>              </div>
 
               <label className="text-sm font-medium text-slate-800">
                 Your question
