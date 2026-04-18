@@ -249,7 +249,7 @@ if (leadPhone && leadPhone.trim() !== "") {
   payload.phone = leadPhone;
 }
 
-await fetch("https://hook.us2.make.com/ul2u2hzh7m3a28ql7hruer5mhwevsejf", {
+await fetch("https://hook.us2.make.com/ecynaw1rgfmwe59tmw42w2h2b5696y5l", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
