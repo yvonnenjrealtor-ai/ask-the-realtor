@@ -228,7 +228,15 @@ const [leadPhone, setLeadPhone] = useState("");
 
     try {
       setLoading(true);
-      const payload = {
+     const payload: {
+  name: string;
+  email: string;
+  question: string;
+  location: string;
+  timestamp: string;
+  source: string;
+  phone?: string;
+} = {
   name: leadName,
   email: leadEmail,
   question: q,
