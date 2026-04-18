@@ -146,7 +146,9 @@ const acceptDisclaimer = () => {
   const [question, setQuestion] = useState("");
   const [location, setLocation] = useState("New Jersey");
   const [tone, setTone] = useState<Tone>("Professional (Savvy)");
-
+const [leadName, setLeadName] = useState("");
+const [leadEmail, setLeadEmail] = useState("");
+const [leadPhone, setLeadPhone] = useState("");
   const [loading, setLoading] = useState(false);
   const [rawAnswer, setRawAnswer] = useState("");
   const [error, setError] = useState("");
@@ -350,20 +352,26 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
     Powered by AI. Backed by Yvonne Sanford.
   </p>
 
-  <input
-    placeholder="First Name"
-    className="mt-2 w-full rounded-xl border border-slate-300 px-3 py-2"
-  />
+ <input
+  value={leadName}
+  onChange={(e) => setLeadName(e.target.value)}
+  placeholder="First Name"
+  className="mt-2 w-full rounded-xl border border-slate-300 px-3 py-2"
+/>
 
   <input
-    placeholder="Email"
-    className="mt-2 w-full rounded-xl border border-slate-300 px-3 py-2"
-  />
+  value={leadEmail}
+  onChange={(e) => setLeadEmail(e.target.value)}
+  placeholder="Email"
+  className="mt-2 w-full rounded-xl border border-slate-300 px-3 py-2"
+/>
 
   <input
-    placeholder="Phone (optional)"
-    className="mt-2 w-full rounded-xl border border-slate-300 px-3 py-2"
-  />
+  value={leadPhone}
+  onChange={(e) => setLeadPhone(e.target.value)}
+  placeholder="Phone (optional)"
+  className="mt-2 w-full rounded-xl border border-slate-300 px-3 py-2"
+/>
 
   
 
