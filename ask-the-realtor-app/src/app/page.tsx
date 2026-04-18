@@ -241,7 +241,7 @@ if (leadPhone && leadPhone.trim() !== "") {
   payload.phone = leadPhone;
 }
 
-await fetch("YOUR_WEBHOOK_URL_HERE", {
+await fetch("https://hook.us2.make.com/ul2u2hzh7m3a28ql7hruer5mhwevsejf", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
