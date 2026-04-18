@@ -228,6 +228,26 @@ const [leadPhone, setLeadPhone] = useState("");
 
     try {
       setLoading(true);
+      const payload = {
+  name: leadName,
+  email: leadEmail,
+  question: q,
+  location,
+  timestamp: new Date().toISOString(),
+  source: "Chat Homes AI",
+};
+
+if (leadPhone && leadPhone.trim() !== "") {
+  payload.phone = leadPhone;
+}
+
+await fetch("YOUR_WEBHOOK_URL_HERE", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(payload),
+});
       const res = await fetch("/api/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
