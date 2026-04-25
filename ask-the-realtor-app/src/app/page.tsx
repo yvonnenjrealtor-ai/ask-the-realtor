@@ -332,7 +332,7 @@ await fetch("https://hook.us2.make.com/ul2u2hzh7m3a28ql7hruer5mhwevsejf", {
   </h1>
 
   <p className="mt-2 text-base text-slate-600">
-    by Yvonne Sanford
+    Homebuying help, by Yvonne Sanford
   </p>
 
   <p className="mt-2 max-w-2xl text-base leading-relaxed text-slate-600">
