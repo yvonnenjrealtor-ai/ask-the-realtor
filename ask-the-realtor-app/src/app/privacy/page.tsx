@@ -2,7 +2,7 @@ export default function PrivacyPage() {
   return (
     <main style={{padding:'40px', maxWidth:'800px', margin:'0 auto'}}>
       <h1>Privacy Policy</h1>
-      <p>Effective Date: [Insert Date]</p>
+      <p>Effective Date: [April 25,2026]</p>
 
       <p>Chat Homes AI respects your privacy.</p>
 
