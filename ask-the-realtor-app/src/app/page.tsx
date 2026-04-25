@@ -698,7 +698,45 @@ disabled={!question.trim() || !leadName.trim() || !leadEmail.trim()}
     <div>
       Information is free. No boligation. Personalized guidance is available whenever you are ready. Inforamtion is generated using artificial intelligence and should be independently verified.
     </div>
+<div className="mt-10 border-t border-gray-200 pt-6 text-center text-sm text-gray-600">
+  
+  <div className="font-medium text-gray-800 mb-3">
+    Homebuying Help by Yvonne Sanford
+  </div>
 
+  <div className="flex flex-wrap justify-center gap-4 mb-4">
+    <a
+      href="/privacy"
+      className="hover:text-black underline underline-offset-2"
+    >
+      Privacy Policy
+    </a>
+
+    <a
+      href="/terms"
+      className="hover:text-black underline underline-offset-2"
+    >
+      Terms of Use
+    </a>
+
+    <a
+      href="mailto:yvonne.njrealtor@gmail.com"
+      className="hover:text-black underline underline-offset-2"
+    >
+      Contact Support
+    </a>
+  </div>
+
+  <div className="text-xs text-gray-500 leading-5 max-w-xl mx-auto">
+    Questions are free. No obligation. Personalized guidance available when
+    you're ready.
+  </div>
+
+  <div className="mt-3 text-xs text-gray-400">
+    © 2026 Chat Homes AI with Yvonne Sanford
+  </div>
+
+</div>
     <div className="mt-3">
       {"©"} {new Date().getFullYear()} Chat Homes AI with Yvonne Sanford
     </div>
