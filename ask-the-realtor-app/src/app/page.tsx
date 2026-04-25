@@ -569,7 +569,7 @@ disabled={!question.trim() || !leadName.trim() || !leadEmail.trim()}
   </h3>
 
   <p className="mt-1 text-sm text-slate-600">
-    Direct access for guidance, showings, and next steps.
+    Direct access for guidance, showings, and next steps🏡
   </p>
 
   <div className="mt-4 space-y-3">
@@ -589,7 +589,7 @@ disabled={!question.trim() || !leadName.trim() || !leadEmail.trim()}
     </a>
 
     <p className="text-center text-xs text-slate-500">
-      Tap the card to book a call with me
+      Tap the card or scan QR code to book a call with me!
     </p>
   </div>
 </section>
@@ -691,12 +691,12 @@ disabled={!question.trim() || !leadName.trim() || !leadEmail.trim()}
 
     <div>
       No agency relationship is created through use of this application.
-      Agency is established only through a fully executed written agreement
+      Agency relationship is established only through a fully executed written agreement and disclosures
       and delivery of the New Jersey Consumer Information Statement (CIS).
     </div>
 
     <div>
-      Information may be generated using artificial intelligence and should be independently verified.
+      Information is free. No boligation. Personalized guidance is available whenever you are ready. Inforamtion is generated using artificial intelligence and should be independently verified.
     </div>
 
     <div className="mt-3">
