@@ -732,10 +732,6 @@ disabled={!question.trim() || !leadName.trim() || !leadEmail.trim()}
     you're ready.
   </div>
 
-  <div className="mt-3 text-xs text-gray-400">
-    © 2026 Chat Homes AI with Yvonne Sanford
-  </div>
-
 </div>
     <div className="mt-3">
       {"©"} {new Date().getFullYear()} Chat Homes AI with Yvonne Sanford
