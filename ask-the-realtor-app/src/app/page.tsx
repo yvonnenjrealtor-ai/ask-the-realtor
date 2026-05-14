@@ -388,22 +388,22 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
   value={leadName}
   onChange={(e) => setLeadName(e.target.value)}
   placeholder="First Name"
-  className="mt-2 w-full rounded-xl border border-slate-300 px-3 py-2"
-/>
+className="mt-2 w-full rounded-xl border border-[#D4AF37] bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-yellow-400 focus:ring-4 focus:ring-yellow-100 focus:outline-none"
+   />
 
   <input
   value={leadEmail}
   onChange={(e) => setLeadEmail(e.target.value)}
   placeholder="Email"
-  className="mt-2 w-full rounded-xl border border-slate-300 px-3 py-2"
-/>
+className="mt-2 w-full rounded-xl border border-[#D4AF37] bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-yellow-400 focus:ring-4 focus:ring-yellow-100 focus:outline-none"
+    />
 
   <input
   value={leadPhone}
   onChange={(e) => setLeadPhone(e.target.value)}
   placeholder="Phone (optional)"
-  className="mt-2 w-full rounded-xl border border-slate-300 px-3 py-2"
-/>
+className="mt-2 w-full rounded-xl border border-[#D4AF37] bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-yellow-400 focus:ring-4 focus:ring-yellow-100 focus:outline-none"
+    />
 
   
 
