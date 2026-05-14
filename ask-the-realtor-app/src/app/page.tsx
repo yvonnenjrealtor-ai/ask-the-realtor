@@ -428,7 +428,7 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
                   <input
                     value={location}
                     onChange={(e) => setLocation(e.target.value)}
-                    className="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-yellow-400 focus:outline-none focus:ring-4 focus:ring-yellow-200"
+                    className="mt-2 w-full rounded-xl border border-[#D4AF37] bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-yellow-400 focus:outline-none focus:ring-4 focus:ring-yellow-200"
                   />
                 </label>
 
@@ -437,7 +437,7 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
                   <select
                     value={tone}
                     onChange={(e) => setTone(e.target.value as Tone)}
-                    className="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-yellow-400 focus:outline-none focus:ring-4 focus:ring-yellow-200"
+                    className="mt-2 w-full rounded-xl border border-[#D4AF37] bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-yellow-400 focus:outline-none focus:ring-4 focus:ring-yellow-200"
                   >
                     <option>Professional (Savvy)</option>
                     <option>Plain English</option>
