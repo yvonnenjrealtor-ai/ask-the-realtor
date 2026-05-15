@@ -381,35 +381,7 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
   </p>
 
                 <p className="text-sm font-semibold text-slate-900 mt-4 mb-2">
-  Step 2: Enter your name and email to unlock your answer
-</p>
-                
- <input
-  value={leadName}
-  onChange={(e) => setLeadName(e.target.value)}
-  placeholder="First Name"
-className="mt-2 w-full rounded-xl border border-[#D4AF37] bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-yellow-400 focus:ring-4 focus:ring-yellow-100 focus:outline-none"
-   />
 
-  <input
-  value={leadEmail}
-  onChange={(e) => setLeadEmail(e.target.value)}
-  placeholder="Email"
-className="mt-2 w-full rounded-xl border border-[#D4AF37] bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-yellow-400 focus:ring-4 focus:ring-yellow-100 focus:outline-none"
-    />
-
-  <input
-  value={leadPhone}
-  onChange={(e) => setLeadPhone(e.target.value)}
-  placeholder="Phone (optional)"
-className="mt-2 w-full rounded-xl border border-[#D4AF37] bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-yellow-400 focus:ring-4 focus:ring-yellow-100 focus:outline-none"
-    />
-
-  
-
-  <p className="text-xs text-slate-500 mt-2">
-    No spam. No pressure. Just smart guidance.
-  </p>
 </div>              </div>
 
               <label className="text-sm font-medium text-slate-800">
@@ -445,7 +417,6 @@ className="mt-2 w-full rounded-xl border border-[#D4AF37] bg-white px-4 py-3 tex
                   </select>
                 </label>
               </div>
-
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <button
                   onClick={onAsk}
