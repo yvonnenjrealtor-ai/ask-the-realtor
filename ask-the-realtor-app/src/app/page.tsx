@@ -379,7 +379,9 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
   <p className="text-sm text-slate-600 mb-3">
     Powered by AI. Backed by Yvonne Sanford.
   </p>
-
+  
+  </div>
+                
               <label className="text-sm font-medium text-slate-800">
                 Step 1: Your question
                 <textarea
