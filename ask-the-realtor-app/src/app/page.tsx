@@ -528,6 +528,7 @@ disabled={!question.trim() || !leadName.trim() || !leadEmail.trim()}
                 </div>
               </div>
             </div>
+              </div>
           </section>
 
           {/* RIGHT */}
