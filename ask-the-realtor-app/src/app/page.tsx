@@ -380,8 +380,6 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
     Powered by AI. Backed by Yvonne Sanford.
   </p>
 
-                <p className="text-sm font-semibold text-slate-900 mt-4 mb-2">
-
               <label className="text-sm font-medium text-slate-800">
                 Step 1: Your question
                 <textarea
