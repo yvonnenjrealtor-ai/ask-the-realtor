@@ -430,7 +430,36 @@ disabled={!question.trim() || !leadName.trim() || !leadEmail.trim()}
                     "Get My Answer"
                   )}
                 </button>
+<div className="mt-2 rounded-xl border border-slate-200 bg-white p-4">
+  <p className="text-sm font-semibold text-slate-900 mb-2">
+    Step 2: Enter your name and email to unlock your answer
+  </p>
 
+  <input
+    value={leadName}
+    onChange={(e) => setLeadName(e.target.value)}
+    placeholder="First Name"
+    className="mt-2 w-full rounded-xl border border-[#D4AF37] bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-yellow-400 focus:ring-4 focus:ring-yellow-100 focus:outline-none"
+  />
+
+  <input
+    value={leadEmail}
+    onChange={(e) => setLeadEmail(e.target.value)}
+    placeholder="Email"
+    className="mt-3 w-full rounded-xl border border-[#D4AF37] bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-yellow-400 focus:ring-4 focus:ring-yellow-100 focus:outline-none"
+  />
+
+  <input
+    value={leadPhone}
+    onChange={(e) => setLeadPhone(e.target.value)}
+    placeholder="Phone (optional)"
+    className="mt-3 w-full rounded-xl border border-[#D4AF37] bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-yellow-400 focus:ring-4 focus:ring-yellow-100 focus:outline-none"
+  />
+
+  <p className="text-xs text-slate-500 mt-2">
+    No spam. No pressure. Just smart guidance.
+  </p>
+</div>
                 <div className="flex flex-wrap gap-2">
                   <button
                     onClick={() => navigator.clipboard.writeText(rawAnswer || "")}
