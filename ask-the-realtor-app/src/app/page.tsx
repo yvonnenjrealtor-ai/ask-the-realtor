@@ -415,8 +415,8 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
                   </select>
                 </label>
               </div>
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                <button
+<div className="flex flex-col gap-4">
+  <button
                   onClick={onAsk}
 disabled={!question.trim() || !leadName.trim() || !leadEmail.trim()}
 className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-yellow-400 px-5 py-3 font-semibold text-slate-900 shadow-sm transition hover:bg-yellow-500 disabled:cursor-not-allowed disabled:opacity-60"                  
