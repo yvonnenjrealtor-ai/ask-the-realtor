@@ -460,6 +460,9 @@ className="mt-4 inline-flex w-full sm:w-auto items-center justify-center gap-2 r
                     "Get My Answer"
                   )}
                 </button>
+<p className="mt-2 text-center text-xs text-slate-500">
+  Free guidance. No obligation. Trusted New Jersey real estate insight.
+</p>
   <div className="flex flex-wrap gap-2">
                   <button
                     onClick={() => navigator.clipboard.writeText(rawAnswer || "")}
