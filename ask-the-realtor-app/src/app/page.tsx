@@ -490,8 +490,8 @@ className="mt-4 inline-flex w-full sm:w-auto items-center justify-center gap-2 r
 
               {/* ANSWER: elevated sections */}
               {rawAnswer ? (
-                <div className="mt-2 space-y-4">
-                  <div className="flex items-center justify-between">
+<div className="mt-2 space-y-4 animate-in fade-in duration-500">
+  <div className="flex items-center justify-between">
                     <div>
                       <div className="text-sm font-semibold text-slate-900">Answer</div>
                       <div className="text-xs text-slate-500">
