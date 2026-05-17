@@ -418,7 +418,7 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
 <div className="flex flex-col gap-4">
 <div className="mt-2 rounded-xl border border-slate-200 bg-white p-4">
   <p className="text-sm font-semibold text-slate-900 mb-2">
-    Step 2: Enter your name and email to unlock your answer
+🔒 Step 2: Enter your name and email to unlock your answer
   </p>
 
   <input
