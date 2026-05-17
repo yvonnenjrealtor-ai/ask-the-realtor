@@ -416,20 +416,6 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
                 </label>
               </div>
 <div className="flex flex-col gap-4">
-  <button
-                  onClick={onAsk}
-disabled={!question.trim() || !leadName.trim() || !leadEmail.trim()}
-className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-yellow-400 px-5 py-3 font-semibold text-slate-900 shadow-sm transition hover:bg-yellow-500 disabled:cursor-not-allowed disabled:opacity-60"                  
-                  >
-                  {loading ? (
-                    <>
-                      <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-slate-900/40 border-t-slate-900" />
-                      Working it out like a Realtor…
-                    </>
-                  ) : (
-                    "Get My Answer"
-                  )}
-                </button>
 <div className="mt-2 rounded-xl border border-slate-200 bg-white p-4">
   <p className="text-sm font-semibold text-slate-900 mb-2">
     Step 2: Enter your name and email to unlock your answer
@@ -460,7 +446,21 @@ className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounde
     No spam. No pressure. Just smart guidance.
   </p>
 </div>
-                <div className="flex flex-wrap gap-2">
+  <button
+                  onClick={onAsk}
+disabled={!question.trim() || !leadName.trim() || !leadEmail.trim()}
+className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-yellow-400 px-5 py-3 font-semibold text-slate-900 shadow-sm transition hover:bg-yellow-500 disabled:cursor-not-allowed disabled:opacity-60"                  
+                  >
+                  {loading ? (
+                    <>
+                      <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-slate-900/40 border-t-slate-900" />
+                      Working it out like a Realtor…
+                    </>
+                  ) : (
+                    "Get My Answer"
+                  )}
+                </button>
+  <div className="flex flex-wrap gap-2">
                   <button
                     onClick={() => navigator.clipboard.writeText(rawAnswer || "")}
                     disabled={!rawAnswer.trim()}
