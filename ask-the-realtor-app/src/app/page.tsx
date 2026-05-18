@@ -507,7 +507,9 @@ Preparing your personalized guidance…
 <div className="mt-4 space-y-5 rounded-2xl border border-slate-200 bg-white/90 p-5 shadow-xl shadow-slate-200/50 backdrop-blur transition-all duration-700 ease-out">
   <div className="flex items-center justify-between">
                     <div>
-                      <div className="text-sm font-semibold text-slate-900">Answer</div>
+<div className="inline-flex items-center rounded-full border border-yellow-200 bg-yellow-50 px-4 py-1 text-xs font-bold uppercase tracking-[0.18em] text-yellow-700">
+  Personalized Guidance
+</div>
                       <div className="text-xs text-slate-500">
                         Area: <span className="font-medium text-slate-700">{location}</span> • Tone:{" "}
                         <span className="font-medium text-slate-700">{tone}</span>
