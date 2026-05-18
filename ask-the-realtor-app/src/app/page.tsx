@@ -560,7 +560,27 @@ Preparing your personalized guidance…
                 </div>
               </div>
             </div>
-              </div>
+              {/* CTA */}
+<div className="mt-6 rounded-2xl bg-yellow-50 border border-yellow-200 p-5 text-center">
+  <div className="text-lg font-semibold text-slate-900">
+    Need more personalized guidance?
+  </div>
+
+  <p className="mt-2 text-sm text-slate-600">
+    Book directly with Yvonne Sanford for buyer strategy,
+    investment guidance, or New Jersey real estate support.
+  </p>
+
+  <a
+    href="https://blinq.me/pEhYxpoPsDCh?bs=db"
+    target="_blank"
+    rel="noreferrer"
+    className="mt-4 inline-flex items-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-800 transition-all"
+  >
+    Book a Consultation
+  </a>
+</div>
+            </div>
           </section>
 
           {/* RIGHT */}
