@@ -454,11 +454,11 @@ className="mt-4 inline-flex w-full sm:w-auto items-center justify-center gap-2 r
     {loading ? (
                     <>
                       <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-slate-900/40 border-t-slate-900" />
-                      Working it out like a Realtor…
+Preparing your personalized guidance…
                     </>
                   ) : (
-                    "Get My Answer"
-                  )}
+"Unlock My Answer"
+)}
                 </button>
 <p className="mt-2 text-center text-xs text-slate-500">
   Free guidance. No obligation. Trusted New Jersey real estate insight.
