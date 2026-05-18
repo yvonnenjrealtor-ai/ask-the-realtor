@@ -773,6 +773,21 @@ Preparing your personalized guidance…
 </footer>
 </aside>
 </main>
+</main>
+
+{/* Floating Mobile CTA */}
+<div className="fixed bottom-4 left-0 right-0 z-50 flex justify-center px-4 sm:hidden">
+  <a
+    href="https://blinq.me/pEhYxpoPsDCh?bs=db"
+    target="_blank"
+    rel="noreferrer"
+    className="w-full max-w-sm rounded-2xl bg-slate-900 px-5 py-4 text-center text-sm font-semibold text-white shadow-2xl transition-all hover:bg-slate-800"
+  >
+    Book Yvonne Sanford
+  </a>
+</div>
+
+</div>
 </div>
 </div>
 </>
