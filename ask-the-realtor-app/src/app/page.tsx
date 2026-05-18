@@ -370,8 +370,18 @@ await fetch("https://hook.us2.make.com/9rfr65qh3uk1jldcsdxkj2qjpencw58w", {
                 <p className="text-sm text-slate-600">
 Ask it like you would in a consult. I’ll answer like a pro—clear, direct, and actionable.
                 </p>
-             
-              <div className="mb-6 p-4 border rounded-xl bg-white">
+             <div className="mt-4 grid gap-2 sm:grid-cols-3">
+  <div className="rounded-xl border border-yellow-200 bg-yellow-50 px-3 py-2 text-center text-xs font-semibold text-slate-700">
+    AI-powered guidance
+  </div>
+  <div className="rounded-xl border border-yellow-200 bg-yellow-50 px-3 py-2 text-center text-xs font-semibold text-slate-700">
+    Backed by 26+ years experience
+  </div>
+  <div className="rounded-xl border border-yellow-200 bg-yellow-50 px-3 py-2 text-center text-xs font-semibold text-slate-700">
+    New Jersey real estate focused
+  </div>
+</div>
+                <div className="mb-6 p-4 border rounded-xl bg-white">
   <h3 className="text-md font-semibold text-slate-900">
     Get Your Personalized Real Estate Guidance
   </h3>
