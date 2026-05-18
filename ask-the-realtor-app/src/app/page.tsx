@@ -775,7 +775,6 @@ Preparing your personalized guidance…
 </main>
 </div>
 </div>
-</div>
 </>
 );
 }
