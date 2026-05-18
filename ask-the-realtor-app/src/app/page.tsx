@@ -402,8 +402,8 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
                   value={question}
                   onChange={(e) => setQuestion(e.target.value)}
                   placeholder="Example: I'm buying in NJ—what should I focus on during attorney review?"
-                  className="mt-2 min-h-[120px] w-full resize-y rounded-xl border border-slate-300 bg-white p-4 text-slate-900 placeholder:text-slate-400 shadow-sm focus:border-yellow-400 focus:outline-none focus:ring-4 focus:ring-yellow-200"
-                />
+className="mt-2 min-h-[140px] w-full resize-y rounded-2xl border border-slate-300 bg-white px-4 py-4 text-slate-900 shadow-sm transition-all duration-200 placeholder:text-slate-400 focus:border-yellow-400 focus:outline-none focus:ring-4 focus:ring-yellow-100"
+                  />
               </label>
 
               <div className="grid gap-3 sm:grid-cols-3">
