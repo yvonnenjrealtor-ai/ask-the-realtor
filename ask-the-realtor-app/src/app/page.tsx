@@ -495,11 +495,15 @@ Preparing your personalized guidance…
 </p>
   <div className="flex flex-wrap gap-2">
                   <button
-                    onClick={() => navigator.clipboard.writeText(rawAnswer || "")}
+onClick={() => {
+  navigator.clipboard.writeText(rawAnswer || "");
+  setCopied(true);
+  setTimeout(() => setCopied(false), 2000);
+}}
                     disabled={!rawAnswer.trim()}
                     className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-60"
                   >
-                    Copy
+{copied ? "Copied!" : "Copy"}
                   </button>
                   <button
                     onClick={saveAnswer}
