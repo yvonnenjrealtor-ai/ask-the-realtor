@@ -385,14 +385,41 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
                 
               <label className="text-sm font-medium text-slate-800">
                 Step 1: Your question
-                <textarea
-                  value={question}
-                  onChange={(e) => setQuestion(e.target.value)}
-                  placeholder="Example: I'm buying in NJ—what should I focus on during attorney review?"
-className="mt-2 min-h-[140px] w-full resize-y rounded-2xl border border-slate-300 bg-white px-4 py-4 text-slate-900 shadow-sm transition-all duration-200 placeholder:text-slate-400 focus:border-yellow-400 focus:outline-none focus:ring-4 focus:ring-yellow-100"
-                  />
-              </label>
+  <div className="relative">
+  <textarea
+    value={question}
+    onChange={(e) => setQuestion(e.target.value)}
+    placeholder="Tap the mic or type your real estate question..."
+    className="mt-2 min-h-[140px] w-full resize-y rounded-2xl border border-slate-300 bg-white px-4 py-4 text-slate-900 shadow-sm"
+  />
 
+  <button
+    type="button"
+    onClick={() => {
+      const SpeechRecognition =
+        (window as any).SpeechRecognition ||
+        (window as any).webkitSpeechRecognition;
+
+      if (!SpeechRecognition) {
+        alert("Voice recognition is not supported on this device/browser.");
+        return;
+      }
+
+      const recognition = new SpeechRecognition();
+      recognition.lang = "en-US";
+      recognition.start();
+
+      recognition.onresult = (event: any) => {
+        const transcript = event.results[0][0].transcript;
+        setQuestion(transcript);
+      };
+    }}
+    className="absolute bottom-4 right-4 rounded-full bg-yellow-400 px-3 py-2 text-sm font-semibold shadow-md transition hover:bg-yellow-300"
+  >
+    🎤
+  </button>
+</div>
+              </label>
               <div className="grid gap-3 sm:grid-cols-3">
                 <label className="text-sm font-medium text-slate-800">
                   Area
