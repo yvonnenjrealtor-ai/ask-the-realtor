@@ -381,11 +381,15 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
     New Jersey real estate focused
   </div>
 </div>
-                <div className="mb-6 p-4 border rounded-xl bg-white">
+<div className="mb-6 rounded-2xl border border-yellow-200 bg-gradient-to-r from-yellow-50 to-white p-5 shadow-sm">
   <h3 className="text-md font-semibold text-slate-900">
     Get Your Personalized Real Estate Guidance
   </h3>
-
+  
+  <p className="mt-1 text-xs font-medium uppercase tracking-wide text-yellow-700">
+  Trusted NJ Real Estate Guidance • Powered by AI + 26 Years Experience
+</p>
+  
   <p className="text-sm text-slate-600 mb-3">
     Powered by AI. Backed by Yvonne Sanford.
   </p>
