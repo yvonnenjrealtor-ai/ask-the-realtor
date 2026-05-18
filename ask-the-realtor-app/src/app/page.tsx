@@ -463,7 +463,7 @@ className="mt-2 w-full rounded-2xl border border-[#D4AF37] bg-white px-4 py-3 te
   <button
                   onClick={onAsk}
 disabled={!question.trim() || !leadName.trim() || !leadEmail.trim()}
-className="mt-4 inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl bg-yellow-400 px-5 py-4 text-sm font-semibold text-slate-900 shadow-lg shadow-yellow-200 transition-all duration-200 hover:-translate-y-0.5 hover:bg-yellow-500 hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-50"
+className="mt-5 inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-yellow-400 to-yellow-500 px-8 py-4 text-sm font-bold text-slate-900 shadow-lg shadow-yellow-200 transition-all duration-300 hover:-translate-y-0.5 hover:from-yellow-300 hover:to-yellow-400 hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-50"
     >
     {loading ? (
                     <>
