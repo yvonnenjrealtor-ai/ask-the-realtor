@@ -412,8 +412,8 @@ className="mt-2 min-h-[140px] w-full resize-y rounded-2xl border border-slate-30
                   <input
                     value={location}
                     onChange={(e) => setLocation(e.target.value)}
-                    className="mt-2 w-full rounded-xl border border-[#D4AF37] bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-yellow-400 focus:outline-none focus:ring-4 focus:ring-yellow-200"
-                  />
+className="mt-2 w-full rounded-2xl border border-[#D4AF37] bg-white px-4 py-3 text-slate-900 shadow-sm transition-all duration-200 focus:border-yellow-400 focus:outline-none focus:ring-4 focus:ring-yellow-100"
+                    />
                 </label>
 
                 <label className="text-sm font-medium text-slate-800 sm:col-span-2">
@@ -421,8 +421,8 @@ className="mt-2 min-h-[140px] w-full resize-y rounded-2xl border border-slate-30
                   <select
                     value={tone}
                     onChange={(e) => setTone(e.target.value as Tone)}
-                    className="mt-2 w-full rounded-xl border border-[#D4AF37] bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-yellow-400 focus:outline-none focus:ring-4 focus:ring-yellow-200"
-                  >
+className="mt-2 w-full rounded-2xl border border-[#D4AF37] bg-white px-4 py-3 text-slate-900 shadow-sm transition-all duration-200 focus:border-yellow-400 focus:outline-none focus:ring-4 focus:ring-yellow-100"
+                    >
                     <option>Professional (Savvy)</option>
                     <option>Plain English</option>
                     <option>Investor Lens</option>
