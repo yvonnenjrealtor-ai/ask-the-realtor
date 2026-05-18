@@ -547,8 +547,8 @@ Preparing your personalized guidance…
                     </div>
                   ) : (
 <div className="rounded-3xl border border-yellow-100 bg-gradient-to-br from-white to-yellow-50 p-6 shadow-lg shadow-yellow-100/40">
-  <div className="prose prose-slate max-w-none whitespace-pre-wrap">
-                        {rawAnswer}
+<div className="prose prose-slate max-w-none whitespace-pre-wrap leading-8 text-[15px] text-slate-700">
+  {rawAnswer}
                       </div>
                     </div>
                   )}
