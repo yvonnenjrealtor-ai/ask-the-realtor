@@ -463,8 +463,8 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
   <button
                   onClick={onAsk}
 disabled={!question.trim() || !leadName.trim() || !leadEmail.trim()}
-className="mt-4 inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-yellow-400 px-5 py-3 font-semibold text-slate-900 shadow-sm transition hover:bg-yellow-500 disabled:cursor-not-allowed disabled:opacity-60"
->
+className="mt-4 inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl bg-yellow-400 px-5 py-4 text-sm font-semibold text-slate-900 shadow-lg shadow-yellow-200 transition-all duration-200 hover:-translate-y-0.5 hover:bg-yellow-500 hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-50"
+    >
     {loading ? (
                     <>
                       <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-slate-900/40 border-t-slate-900" />
