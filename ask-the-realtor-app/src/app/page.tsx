@@ -566,8 +566,8 @@ Preparing your personalized guidance…
                         setRawAnswer("");
                         setError("");
                       }}
-                      className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-left text-sm text-slate-700 shadow-sm hover:bg-slate-50"
-                    >
+className="rounded-2xl border border-slate-200 bg-white px-4 py-4 text-left text-sm text-slate-700 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-yellow-300 hover:bg-yellow-50 hover:shadow-md"
+                      >
                       {ex}
                     </button>
                   ))}
