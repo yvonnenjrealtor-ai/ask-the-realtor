@@ -759,7 +759,7 @@ Preparing your personalized guidance…
     </a>
   </div>
 
-  <div className="text-xs text-gray-500 leading-5 max-w-xl mx-auto">
+  <div className="text-xs text-gray-500 leading-5 max-w-xl mx-auto"> 
     Questions are free. No obligation. Personalized guidance available when
     you're ready.
   </div>
