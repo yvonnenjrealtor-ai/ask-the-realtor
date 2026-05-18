@@ -376,9 +376,6 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
     Get Your Personalized Real Estate Guidance
   </h3>
   
-  <p className="mt-1 text-xs font-medium uppercase tracking-wide text-yellow-700">
-  Trusted NJ Real Estate Guidance • Powered by AI + 26 Years Experience
-</p>
   
   <p className="text-sm text-slate-600 mb-3">
     Powered by AI. Backed by Yvonne Sanford.
