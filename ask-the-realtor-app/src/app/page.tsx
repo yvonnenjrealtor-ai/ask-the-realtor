@@ -504,7 +504,7 @@ Preparing your personalized guidance…
 
               {/* ANSWER: elevated sections */}
               {rawAnswer ? (
-<div className="mt-2 space-y-4 transition-all duration-700 ease-out">
+<div className="mt-4 space-y-5 rounded-2xl border border-slate-200 bg-white/90 p-5 shadow-xl shadow-slate-200/50 backdrop-blur transition-all duration-700 ease-out">
   <div className="flex items-center justify-between">
                     <div>
                       <div className="text-sm font-semibold text-slate-900">Answer</div>
