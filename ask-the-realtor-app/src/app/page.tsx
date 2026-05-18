@@ -155,7 +155,9 @@ const [leadPhone, setLeadPhone] = useState("");
 
   const [saved, setSaved] = useState<SavedItem[]>([]);
   const [recent, setRecent] = useState<RecentItem[]>([]);
-
+const [listening, setListening] = useState(false);
+const [copied, setCopied] = useState(false);
+const [savedNotice, setSavedNotice] = useState(false);
   const canAsk = useMemo(() => question.trim().length >= 10 && !loading, [question, loading]);
 
   useEffect(() => {
