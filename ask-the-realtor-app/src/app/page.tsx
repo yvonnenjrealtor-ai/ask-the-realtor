@@ -766,6 +766,15 @@ className="rounded-2xl border border-slate-200 bg-white px-4 py-4 text-left text
   
   <div className="font-medium text-gray-800 mb-3">
     Homebuying Help by Yvonne Sanford
+      </div>
+  
+    <p className="mt-2 text-xs text-slate-500">
+  This app provides general educational information only and is not legal, tax, financial, or brokerage advice.
+</p>
+
+<p className="mt-2 text-xs text-slate-500">
+  Need help? contact@chathomesai.com
+</p>
   </div>
 
   <div className="flex flex-wrap justify-center gap-4 mb-4">
