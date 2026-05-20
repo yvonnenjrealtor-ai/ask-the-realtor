@@ -202,6 +202,8 @@ const [savedNotice, setSavedNotice] = useState(false);
       savedAt: Date.now(),
     };
     setSaved((prev) => [item, ...prev].slice(0, 30));
+    setSavedNotice(true);
+setTimeout(() => setSavedNotice(false), 2000);
   }
 
   function loadSaved(item: SavedItem) {
