@@ -775,7 +775,6 @@ className="rounded-2xl border border-slate-200 bg-white px-4 py-4 text-left text
 <p className="mt-2 text-xs text-slate-500">
   Need help? contact@chathomesai.com
 </p>
-  </div>
 
   <div className="flex flex-wrap justify-center gap-4 mb-4">
     <a
