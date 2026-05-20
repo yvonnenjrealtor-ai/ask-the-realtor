@@ -411,12 +411,16 @@ Ask it like you would in a consult. I’ll answer like a pro—clear, direct, an
 
       const recognition = new SpeechRecognition();
       recognition.lang = "en-US";
+      setListening(true);
       recognition.start();
 
       recognition.onresult = (event: any) => {
         const transcript = event.results[0][0].transcript;
         setQuestion(transcript);
       };
+      recognition.onend = () => {
+        setListening(false);
+};
     }}
     className="absolute bottom-4 right-4 rounded-full bg-yellow-400 px-3 py-2 text-sm font-semibold shadow-md transition hover:bg-yellow-300"
   >
