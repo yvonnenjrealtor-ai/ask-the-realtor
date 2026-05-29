@@ -226,7 +226,40 @@ setTimeout(() => setSavedNotice(false), 2000);
     setError("");
     setRawAnswer("");
     if (!canAsk) return;
+const emailCheck = leadEmail.trim().toLowerCase();
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+const blockedEmails = [
+  "test@test.com",
+  "fake@email.com",
+  "abc@abc.com",
+  "none@none.com",
+  "noemail@email.com",
+  "email@email.com",
+  "test@gmail.com"
+];
+
+const blockedDomains = [
+  "test.com",
+  "fake.com",
+  "example.com",
+  "mailinator.com",
+  "tempmail.com",
+  "10minutemail.com"
+];
+
+const emailDomain = emailCheck.split("@")[1];
+
+if (
+  !emailPattern.test(emailCheck) ||
+  blockedEmails.includes(emailCheck) ||
+  blockedDomains.includes(emailDomain)
+) {
+  setError(
+    "Please enter a valid email address so Chat Homes AI can send your response."
+  );
+  return;
+}
     const q = question.trim();
     addRecent(q, location, tone);
 
