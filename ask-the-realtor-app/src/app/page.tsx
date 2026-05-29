@@ -236,7 +236,6 @@ const blockedEmails = [
   "none@none.com",
   "noemail@email.com",
   "email@email.com",
-  "test@gmail.com"
 ];
 
 const blockedDomains = [
