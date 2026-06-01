@@ -372,7 +372,7 @@ Get Instant Answers to Your New Jersey Real Estate Questions
   </p>
 
   <p className="mt-2 max-w-2xl text-base leading-relaxed text-slate-600">
-Buying, selling, investing, or just exploring your options? Ask your question below. Get clear answers.
+Buying, selling, investing, or just exploring your options? Ask your question below.
   </p>
 </div>
 
