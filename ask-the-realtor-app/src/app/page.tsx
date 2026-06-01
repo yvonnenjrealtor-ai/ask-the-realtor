@@ -402,7 +402,7 @@ Buying, selling, investing, or just exploring your options? Ask your question be
           >
             <div className="flex flex-col gap-4">
               <div className="flex flex-col gap-1">
-                <h2 className="text-lg font-semibold text-slate-900">What real estate question can I answer?</h2>
+                <h2 className="text-lg font-semibold text-slate-900">What real estate question can I help you answer?</h2>
                 <p className="text-sm text-slate-600">
 Ask a question and get clear, easy-to-understand answers in seconds.
                 </p>
