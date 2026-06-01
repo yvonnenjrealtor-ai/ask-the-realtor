@@ -372,7 +372,8 @@ Get Instant Answers to Your New Jersey Real Estate Questions
   </p>
 
   <p className="mt-2 max-w-2xl text-base leading-relaxed text-slate-600">
-Buying, selling, investing, or just exploring your options? Get clear, AI-powered guidance on mortgages, down payments, inspections, closing costs, market conditions, and more—backed by Yvonne Sanford's 25+ years of real estate experience.
+Buying, selling, investing, or just exploring your options?
+    Get clear, AI-powered guidance on mortgages, down payments, inspections, closing costs, market conditions, and more—backed by Yvonne Sanford's 25+ years of real estate experience.
   </p>
 </div>
 
