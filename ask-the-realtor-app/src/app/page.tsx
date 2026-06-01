@@ -368,11 +368,11 @@ await fetch("https://hook.us2.make.com/9rfr65qh3uk1jldcsdxkj2qjpencw58w", {
   </h1>
 
   <p className="mt-2 text-base text-slate-600">
-    Homebuying help by Yvonne Sanford
+Get Instant Answers to Your New Jersey Real Estate Questions
   </p>
 
   <p className="mt-2 max-w-2xl text-base leading-relaxed text-slate-600">
-    Smart, guided real estate answers for New Jersey buyers and sellers.
+Buying, selling, investing, or just exploring your options? Get clear, AI-powered guidance on mortgages, down payments, inspections, closing costs, market conditions, and more—backed by Yvonne Sanford's 25+ years of real estate experience.
   </p>
 </div>
 
