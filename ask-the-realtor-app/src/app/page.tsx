@@ -402,14 +402,14 @@ Buying, selling, investing, or just exploring your options? Ask your question be
           >
             <div className="flex flex-col gap-4">
               <div className="flex flex-col gap-1">
-                <h2 className="text-lg font-semibold text-slate-900">What real estate question can I help you with?</h2>
+                <h2 className="text-lg font-semibold text-slate-900">What real estate question can I answer?</h2>
                 <p className="text-sm text-slate-600">
-Ask a question and get clear, easy-to-understand answers.
+Ask a question and get clear, easy-to-understand answers in seconds.
                 </p>
           
 <div className="mb-6 rounded-2xl border border-yellow-200 bg-gradient-to-r from-yellow-50 to-white p-5 shadow-sm">
   <h3 className="text-md font-semibold text-slate-900">
-Ask Your Real Estate Question
+Get Started Below
   </h3>
   
   
