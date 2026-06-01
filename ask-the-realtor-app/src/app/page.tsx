@@ -404,12 +404,12 @@ Buying, selling, investing, or just exploring your options? Ask your question be
               <div className="flex flex-col gap-1">
                 <h2 className="text-lg font-semibold text-slate-900">What real estate question can I help you answer?</h2>
                 <p className="text-sm text-slate-600">
-Ask a question and get clear, easy-to-understand answers in seconds.
+Ask your question. Get instant guidance.
                 </p>
           
 <div className="mb-6 rounded-2xl border border-yellow-200 bg-gradient-to-r from-yellow-50 to-white p-5 shadow-sm">
   <h3 className="text-md font-semibold text-slate-900">
-Get Started Below
+Get Personalized Real Estate Guidance
   </h3>
   
   
@@ -660,13 +660,18 @@ className="rounded-2xl border border-slate-200 bg-white px-4 py-4 text-left text
           {/* RIGHT */}
        <aside className="space-y-6">
   <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-  <h3 className="text-base font-semibold text-slate-900">
-    Connect with Yvonne Sanford
-  </h3>
+ <h3 className="text-base font-semibold text-slate-900">
+  Connect with Yvonne Sanford
+</h3>
 
-  <p className="mt-1 text-sm text-slate-600">
-    Direct access for guidance, showings, and next steps🏡
-  </p>
+<p className="mt-1 text-sm font-medium text-slate-800">
+  Trusted New Jersey Real Estate Advisor
+  Broker-Associate® | REALTOR® | 25+ Years Experience
+</p>
+
+<p className="mt-1 text-sm text-slate-600">
+  Direct access for guidance, showings, and next steps 🏡
+</p>
 
   <div className="mt-4 space-y-3">
     <a
