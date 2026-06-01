@@ -328,8 +328,8 @@ await fetch("https://hook.us2.make.com/9rfr65qh3uk1jldcsdxkj2qjpencw58w", {
     <>
   {showDisclaimer && (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-      <div className="max-w-md rounded-lg bg-white p-6 text-sm shadow-lg">
-        <h2 className="mb-2 text-lg font-semibold">Important Disclosure</h2>
+<div className="max-w-md rounded-lg bg-white p-6 text-sm text-slate-800 shadow-lg">
+ <h2 className="mb-2 text-lg font-semibold text-slate-900">Important Notice</h2>
 
         <p className="mb-3">
           This application uses artificial intelligence (AI) to generate responses.
