@@ -759,16 +759,6 @@ className="rounded-2xl border border-slate-200 bg-white px-4 py-4 text-left text
     </div>
   </section>
 
-  <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-    <h3 className="text-base font-semibold text-slate-900">How it works</h3>
-
-    <div className="mt-4 space-y-4 text-sm text-slate-700">
-      <div>1. Ask your question like you would in a real consult.</div>
-      <div>2. Default area is New Jersey. Adjust if needed.</div>
-      <div>3. Get the answer + watch-outs + next steps.</div>
-    </div>
-  </section>
-
  <footer className="mt-10 border-t border-slate-200 pt-6 text-xs text-slate-600">
   <div className="space-y-2">
 
