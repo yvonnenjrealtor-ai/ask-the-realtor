@@ -378,12 +378,13 @@ Buying, selling, investing, or just exploring your options? Ask your question be
 
 
           <div className="mt-2 flex gap-2 sm:mt-0">
-            <a
-              className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-700 shadow-sm hover:bg-slate-50"
-              href="#how"
-            >
-              How it works
-            </a>
+           <button
+  type="button"
+  onClick={() => setShowHowItWorks(true)}
+  className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-700 shadow-sm"
+>
+  How It Works
+</button>
             <a
               className="rounded-lg bg-slate-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-slate-800"
               href="#ask"
