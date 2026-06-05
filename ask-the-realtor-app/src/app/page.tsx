@@ -328,25 +328,24 @@ await fetch("https://hook.us2.make.com/9rfr65qh3uk1jldcsdxkj2qjpencw58w", {
     <>
 {showHowItWorks && (
   <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-    <div className="max-w-lg rounded-lg bg-white p-6 shadow-lg">
-      <h2 className="mb-3 text-xl font-semibold">
-        How Chat Homes AI Works
+<div className="max-w-lg rounded-lg bg-white p-6 text-slate-900 shadow-lg">
+<h2 className="mb-3 text-xl font-semibold text-slate-900">
+  How Chat Homes AI Works
       </h2>
 
       <div className="space-y-4">
         <div>
           <p className="font-semibold">1. Ask your question</p>
-          <p>Type any New Jersey real estate question.</p>
+<p className="text-slate-700">Type any New Jersey real estate question.</p>
         </div>
 
         <div>
           <p className="font-semibold">2. Get instant guidance</p>
-          <p>Receive a clear answer in seconds.</p>
-        </div>
+<p className="text-slate-700">Receive a clear answer in seconds.</p>        </div>
 
         <div>
           <p className="font-semibold">3. Connect when you're ready</p>
-          <p>Need personal help? Schedule a consultation with Yvonne Sanford.</p>
+<p className="text-slate-700">Need personal help? Schedule a consultation with Yvonne Sanford.</p>
         </div>
       </div>
 
