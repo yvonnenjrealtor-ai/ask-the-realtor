@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "Chat Homes AI | Yvonne Sanford",
@@ -20,9 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <link rel="manifest" href="/manifest.json" />
-      <body className="min-h-screen bg-slate-50 text-slate-900 antialiased">
-        {children}
-      </body>
+     <body className="min-h-screen bg-slate-50 text-slate-900 antialiased">
+  {children}
+  <Analytics />
+</body>
     </html>
   );
 }
