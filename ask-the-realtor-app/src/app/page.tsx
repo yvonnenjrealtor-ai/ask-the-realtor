@@ -388,7 +388,7 @@ Buying, selling, investing, or just exploring your options? Ask your question be
            <button
   type="button"
   onClick={() => setShowHowItWorks(true)}
-  className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-700 shadow-sm"
+  className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-700 shadow-sm"
 >
   How It Works
 </button>
