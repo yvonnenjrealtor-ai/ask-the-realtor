@@ -133,7 +133,7 @@ function IconSteps() {
 
 export default function Page() {
   const [showDisclaimer, setShowDisclaimer] = useState(true);
-
+  const [showHowItWorks, setShowHowItWorks] = useState(false);
 useEffect(() => {
   const accepted = localStorage.getItem("aiDisclaimerAccepted");
   if (accepted) setShowDisclaimer(false);
