@@ -827,7 +827,7 @@ className="rounded-2xl border border-slate-200 bg-white px-4 py-4 text-left text
     </a>
 
     <a
-      href="mailto:yvonne.njrealtor@gmail.com"
+      href="mailto:contact@chathomesai.com"
       className="hover:text-black underline underline-offset-2"
     >
       Contact Support
