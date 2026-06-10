@@ -155,9 +155,11 @@ const [leadPhone, setLeadPhone] = useState("");
 
   const [saved, setSaved] = useState<SavedItem[]>([]);
   const [recent, setRecent] = useState<RecentItem[]>([]);
-const [listening, setListening] = useState(false);
 const [copied, setCopied] = useState(false);
 const [savedNotice, setSavedNotice] = useState(false);
+const [leadSubmitted, setLeadSubmitted] = useState(false);
+const [leadError, setLeadError] = useState("");
+const [sendingLead, setSendingLead] = useState(false);
   const canAsk = useMemo(() => question.trim().length >= 10 && !loading, [question, loading]);
 
   useEffect(() => {
@@ -226,72 +228,11 @@ setTimeout(() => setSavedNotice(false), 2000);
     setError("");
     setRawAnswer("");
     if (!canAsk) return;
-const emailCheck = leadEmail.trim().toLowerCase();
-const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-const blockedEmails = [
-  "test@test.com",
-  "fake@email.com",
-  "abc@abc.com",
-  "none@none.com",
-  "noemail@email.com",
-  "email@email.com",
-];
-
-const blockedDomains = [
-  "test.com",
-  "fake.com",
-  "example.com",
-  "mailinator.com",
-  "tempmail.com",
-  "10minutemail.com"
-];
-
-const emailDomain = emailCheck.split("@")[1];
-
-if (
-  !emailPattern.test(emailCheck) ||
-  blockedEmails.includes(emailCheck) ||
-  blockedDomains.includes(emailDomain)
-) {
-  setError(
-    "Please enter a valid email address so Chat Homes AI can send your response."
-  );
-  return;
-}
     const q = question.trim();
     addRecent(q, location, tone);
 
     try {
       setLoading(true);
-     const payload: {
-  name: string;
-  email: string;
-  question: string;
-  location: string;
-  timestamp: string;
-  source: string;
-  phone?: string;
-} = {
-  name: leadName,
-  email: leadEmail,
-  question: q,
-  location,
-  timestamp: new Date().toISOString(),
-  source: "Chat Homes AI",
-};
-
-if (leadPhone && leadPhone.trim() !== "") {
-  payload.phone = leadPhone;
-}
-
-await fetch("https://hook.us2.make.com/9rfr65qh3uk1jldcsdxkj2qjpencw58w", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify(payload),
-});
       const res = await fetch("/api/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -309,12 +250,11 @@ await fetch("https://hook.us2.make.com/9rfr65qh3uk1jldcsdxkj2qjpencw58w", {
       }
 
       setRawAnswer(data?.answer ?? "");
-   } catch (e: unknown) {
-  setError(e instanceof Error ? e.message : "Something went wrong. Please try again.");
-} finally {
-  setLoading(false);
-}
-
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : "Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   const examples = [
@@ -433,39 +373,9 @@ Get Personalized Real Estate Guidance
   <textarea
     value={question}
     onChange={(e) => setQuestion(e.target.value)}
-    placeholder="Tap the mic or type your real estate question..."
+    placeholder="Type your real estate question..."
     className="mt-2 min-h-[140px] w-full resize-y rounded-2xl border border-slate-300 bg-white px-4 py-4 text-slate-900 shadow-sm"
   />
-
-  <button
-    type="button"
-    onClick={() => {
-      const SpeechRecognition =
-        (window as any).SpeechRecognition ||
-        (window as any).webkitSpeechRecognition;
-
-      if (!SpeechRecognition) {
-        alert("Voice recognition is not supported on this device/browser.");
-        return;
-      }
-
-      const recognition = new SpeechRecognition();
-      recognition.lang = "en-US";
-      setListening(true);
-      recognition.start();
-
-      recognition.onresult = (event: any) => {
-        const transcript = event.results[0][0].transcript;
-        setQuestion(transcript);
-      };
-      recognition.onend = () => {
-        setListening(false);
-};
-    }}
-    className="absolute bottom-4 right-4 rounded-full bg-yellow-400 px-3 py-2 text-sm font-semibold shadow-md transition hover:bg-yellow-300"
-  >
-    🎤
-  </button>
 </div>
               </label>
               <div className="grid gap-3 sm:grid-cols-3">
@@ -474,8 +384,8 @@ Get Personalized Real Estate Guidance
                   <input
                     value={location}
                     onChange={(e) => setLocation(e.target.value)}
-className="mt-2 w-full rounded-2xl border border-[#D4AF37] bg-white px-4 py-3 text-slate-900 shadow-sm transition-all duration-200 focus:border-yellow-400 focus:outline-none focus:ring-4 focus:ring-yellow-100"
-                    />
+                    className="mt-2 w-full rounded-2xl border border-[#D4AF37] bg-white px-4 py-3 text-slate-900 shadow-sm transition-all duration-200 focus:border-yellow-400 focus:outline-none focus:ring-4 focus:ring-yellow-100"
+                  />
                 </label>
 
                 <label className="text-sm font-medium text-slate-800 sm:col-span-2">
@@ -483,57 +393,37 @@ className="mt-2 w-full rounded-2xl border border-[#D4AF37] bg-white px-4 py-3 te
                   <select
                     value={tone}
                     onChange={(e) => setTone(e.target.value as Tone)}
-className="mt-2 w-full rounded-2xl border border-[#D4AF37] bg-white px-4 py-3 text-slate-900 shadow-sm transition-all duration-200 focus:border-yellow-400 focus:outline-none focus:ring-4 focus:ring-yellow-100"
-                    >
+                    className="mt-2 w-full rounded-2xl border border-[#D4AF37] bg-white px-4 py-3 text-slate-900 shadow-sm transition-all duration-200 focus:border-yellow-400 focus:outline-none focus:ring-4 focus:ring-yellow-100"
+                  >
                     <option>Professional (Savvy)</option>
                     <option>Plain English</option>
                     <option>Investor Lens</option>
                   </select>
                 </label>
               </div>
-<div className="flex flex-col gap-4">
-<div className="mt-2 rounded-xl border border-slate-200 bg-white p-4">
-  <p className="text-sm font-semibold text-slate-900 mb-2">
-🔒 Step 2: Enter your name and email to unlock your answer
-  </p>
+              <div className="flex flex-col gap-4">
+                <div className="mt-2 rounded-xl border border-slate-200 bg-white p-4">
+                  <p className="text-sm font-semibold text-slate-900 mb-2">
+                    Get your answer without entering contact details first.
+                  </p>
 
-  <input
-    value={leadName}
-    onChange={(e) => setLeadName(e.target.value)}
-    placeholder="First Name"
-    className="mt-2 w-full rounded-xl border border-[#D4AF37] bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-yellow-400 focus:ring-4 focus:ring-yellow-100 focus:outline-none"
-  />
-
-  <input
-    value={leadEmail}
-    onChange={(e) => setLeadEmail(e.target.value)}
-    placeholder="Email"
-    className="mt-3 w-full rounded-xl border border-[#D4AF37] bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-yellow-400 focus:ring-4 focus:ring-yellow-100 focus:outline-none"
-  />
-
-  <input
-    value={leadPhone}
-    onChange={(e) => setLeadPhone(e.target.value)}
-    placeholder="Phone (optional)"
-    className="mt-3 w-full rounded-xl border border-[#D4AF37] bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-yellow-400 focus:ring-4 focus:ring-yellow-100 focus:outline-none"
-  />
-
-  <p className="text-xs text-slate-500 mt-2">
-    No spam. No pressure. Just smart guidance.
-  </p>
-</div>
-  <button
+                  <p className="text-sm text-slate-600">
+                    Ask any New Jersey real estate question, then choose whether you'd like a copy or personal guidance after the answer appears.
+                  </p>
+                </div>
+              </div>
+              <button
                   onClick={onAsk}
-disabled={!question.trim() || !leadName.trim() || !leadEmail.trim()}
+disabled={!canAsk}
 className="mt-5 inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-yellow-400 to-yellow-500 px-8 py-4 text-sm font-bold text-slate-900 shadow-lg shadow-yellow-200 transition-all duration-300 hover:-translate-y-0.5 hover:from-yellow-300 hover:to-yellow-400 hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-50"
     >
     {loading ? (
                     <>
                       <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-slate-900/40 border-t-slate-900" />
-Preparing your personalized guidance…
+Getting your answer…
                     </>
                   ) : (
-"Unlock My Answer"
+"Get instant guidance"
 )}
                 </button>
 <p className="mt-2 text-center text-xs text-slate-500">
@@ -570,15 +460,14 @@ onClick={() => {
 
               {/* ANSWER: elevated sections */}
               {rawAnswer ? (
-<div className="mt-4 space-y-5 rounded-2xl border border-slate-200 bg-white/90 p-5 shadow-xl shadow-slate-200/50 backdrop-blur transition-all duration-700 ease-out">
-  <div className="flex items-center justify-between">
+                <div className="mt-4 space-y-5 rounded-2xl border border-slate-200 bg-white/90 p-5 shadow-xl shadow-slate-200/50 backdrop-blur transition-all duration-700 ease-out">
+                  <div className="flex items-center justify-between">
                     <div>
-<div className="text-sm font-semibold text-slate-900">
-  Area: {location} • Tone: {tone}
-</div>
+                      <div className="text-sm font-semibold text-slate-900">
+                        Area: {location} • Tone: {tone}
+                      </div>
                       <div className="text-xs text-slate-500">
-                        Area: <span className="font-medium text-slate-700">{location}</span> • Tone:{" "}
-                        <span className="font-medium text-slate-700">{tone}</span>
+                        Area: <span className="font-medium text-slate-700">{location}</span> • Tone: <span className="font-medium text-slate-700">{tone}</span>
                       </div>
                     </div>
                     {!sections.hasStructured ? (
@@ -614,12 +503,98 @@ onClick={() => {
                       />
                     </div>
                   ) : (
-<div className="rounded-3xl border border-yellow-100 bg-gradient-to-br from-white to-yellow-50 p-6 shadow-lg shadow-yellow-100/40">
-<div className="prose prose-slate max-w-none whitespace-pre-wrap leading-8 text-[15px] text-slate-700">
-  {rawAnswer}
+                    <div className="rounded-3xl border border-yellow-100 bg-gradient-to-br from-white to-yellow-50 p-6 shadow-lg shadow-yellow-100/40">
+                      <div className="prose prose-slate max-w-none whitespace-pre-wrap leading-8 text-[15px] text-slate-700">
+                        {rawAnswer}
                       </div>
                     </div>
                   )}
+                </div>
+              ) : null}
+
+              {rawAnswer ? (
+                <div className="mt-6 rounded-2xl border border-yellow-200 bg-yellow-50 p-5 shadow-sm">
+                  <div className="text-base font-semibold text-slate-900">
+                    Would you like a copy of this answer or personalized guidance from Yvonne Sanford?
+                  </div>
+                  <p className="mt-2 text-sm text-slate-600">
+                    Enter your name and email to receive a copy or request personal guidance.
+                  </p>
+
+                  <div className="mt-4 grid gap-3 sm:grid-cols-3">
+                    <input
+                      value={leadName}
+                      onChange={(e) => setLeadName(e.target.value)}
+                      placeholder="First Name"
+                      className="w-full rounded-xl border border-[#D4AF37] bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-yellow-400 focus:ring-4 focus:ring-yellow-100 focus:outline-none"
+                    />
+                    <input
+                      value={leadEmail}
+                      onChange={(e) => setLeadEmail(e.target.value)}
+                      placeholder="Email"
+                      className="w-full rounded-xl border border-[#D4AF37] bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-yellow-400 focus:ring-4 focus:ring-yellow-100 focus:outline-none"
+                    />
+                    <input
+                      value={leadPhone}
+                      onChange={(e) => setLeadPhone(e.target.value)}
+                      placeholder="Phone (optional)"
+                      className="w-full rounded-xl border border-[#D4AF37] bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-yellow-400 focus:ring-4 focus:ring-yellow-100 focus:outline-none"
+                    />
+                  </div>
+
+                  {leadError ? (
+                    <div className="mt-4 rounded-xl border border-rose-200 bg-rose-50 p-4 text-sm text-rose-800">
+                      {leadError}
+                    </div>
+                  ) : null}
+
+                  <button
+                    type="button"
+                    onClick={async () => {
+                      setLeadError("");
+                      if (!leadName.trim() || !leadEmail.trim()) {
+                        setLeadError("Please enter your name and email to receive a copy.");
+                        return;
+                      }
+                      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                      if (!emailPattern.test(leadEmail.trim())) {
+                        setLeadError("Please enter a valid email address.");
+                        return;
+                      }
+
+                      setSendingLead(true);
+                      try {
+                        await fetch("https://hook.us2.make.com/9rfr65qh3uk1jldcsdxkj2qjpencw58w", {
+                          method: "POST",
+                          headers: {
+                            "Content-Type": "application/json",
+                          },
+                          body: JSON.stringify({
+                            name: leadName.trim(),
+                            email: leadEmail.trim(),
+                            phone: leadPhone.trim() || undefined,
+                            question: question.trim(),
+                            answer: rawAnswer,
+                            location,
+                            tone,
+                            timestamp: new Date().toISOString(),
+                            source: "Chat Homes AI",
+                          }),
+                        });
+                        setLeadSubmitted(true);
+                      } catch (e: unknown) {
+                        setLeadError(
+                          e instanceof Error ? e.message : "Unable to submit your request. Please try again."
+                        );
+                      } finally {
+                        setSendingLead(false);
+                      }
+                    }}
+                    disabled={sendingLead}
+                    className="mt-4 inline-flex w-full items-center justify-center rounded-2xl bg-slate-900 px-6 py-3 text-sm font-semibold text-white hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-60"
+                  >
+                    {sendingLead ? "Sending request…" : leadSubmitted ? "Request submitted" : "Send my copy / guidance request"}
+                  </button>
                 </div>
               ) : null}
 
@@ -634,34 +609,32 @@ onClick={() => {
                         setRawAnswer("");
                         setError("");
                       }}
-className="rounded-2xl border border-slate-200 bg-white px-4 py-4 text-left text-sm text-slate-700 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-yellow-300 hover:bg-yellow-50 hover:shadow-md"
-                      >
+                      className="rounded-2xl border border-slate-200 bg-white px-4 py-4 text-left text-sm text-slate-700 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-yellow-300 hover:bg-yellow-50 hover:shadow-md"
+                    >
                       {ex}
                     </button>
                   ))}
                 </div>
               </div>
-            </div>
               {/* CTA */}
-<div className="mt-6 rounded-2xl bg-yellow-50 border border-yellow-200 p-5 text-center">
-  <div className="text-lg font-semibold text-slate-900">
-    Need more personalized guidance?
-  </div>
+              <div className="mt-6 rounded-2xl bg-yellow-50 border border-yellow-200 p-5 text-center">
+                <div className="text-lg font-semibold text-slate-900">
+                  Need more personalized guidance?
+                </div>
 
-  <p className="mt-2 text-sm text-slate-600">
-    Book directly with Yvonne Sanford for buyer strategy,
-    investment guidance, or New Jersey real estate support.
-  </p>
+                <p className="mt-2 text-sm text-slate-600">
+                  Book directly with Yvonne Sanford for buyer strategy, investment guidance, or New Jersey real estate support.
+                </p>
 
-  <a
-    href="https://blinq.me/pEhYxpoPsDCh?bs=db"
-    target="_blank"
-    rel="noreferrer"
-    className="mt-4 inline-flex items-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-800 transition-all"
-  >
-    Book a Consultation
-  </a>
-</div>
+                <a
+                  href="https://blinq.me/pEhYxpoPsDCh?bs=db"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-4 inline-flex items-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-800 transition-all"
+                >
+                  Book a Consultation
+                </a>
+              </div>
             </div>
           </section>
 
