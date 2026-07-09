@@ -30,12 +30,19 @@ export default function PrivacyPage() {
           <h1 className="text-2xl font-semibold tracking-tight text-slate-900 md:text-3xl">Privacy Policy</h1>
           <p className="text-sm text-slate-600">Effective Date: April 25, 2026</p>
 
-          <p>Chat Homes AI respects your privacy.</p>
-          <p>We may collect information you voluntarily provide, including your name, email, phone number, and messages submitted through the app.</p>
-          <p>We use information to respond to inquiries, improve services, and provide requested support.</p>
-          <p>We do not sell your personal information.</p>
-          <p>Some responses may be AI-generated and should be independently verified.</p>
-          <p>Contact: contact@chathomesai.com</p>
+          <p>Chat Homes AI uses OpenAI's artificial intelligence services to generate responses to questions submitted through the application.</p>
+
+<p>When you ask a question, only the text you enter is securely transmitted to OpenAI solely for the purpose of generating an AI-generated response.</p>
+
+<p>If you choose to request a copy of your answer or personalized guidance, you may voluntarily provide your name, email address, and optional phone number. This contact information is used only to respond to your request and is not required to use the app.</p>
+
+<p>Chat Homes AI does not sell your personal information or use your submitted questions for advertising or profiling.</p>
+
+<p>Please do not submit Social Security numbers, financial account information, medical information, government identification numbers, home addresses, or other confidential personal information.</p>
+
+<p>AI-generated responses are provided for general informational purposes only and should be independently verified.</p>
+
+<p>Contact: contact@chathomesai.com</p>
         </div>
       </div>
     </main>
