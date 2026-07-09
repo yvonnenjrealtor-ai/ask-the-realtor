@@ -266,6 +266,40 @@ setTimeout(() => setSavedNotice(false), 2000);
 
   return (
     <>
+      {showDisclaimer && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4">
+    <div className="max-w-lg rounded-2xl bg-white p-6 text-slate-900 shadow-xl">
+      <h2 className="mb-3 text-xl font-bold">AI & Privacy Notice</h2>
+
+      <p className="text-sm text-slate-700">
+        Chat Homes AI uses OpenAI’s artificial intelligence services to generate real estate responses.
+      </p>
+
+      <p className="mt-3 text-sm text-slate-700">
+        When you submit a question, the text you enter is sent to OpenAI solely to generate your answer.
+      </p>
+
+      <p className="mt-3 text-sm font-semibold text-slate-900">
+        Please do not enter Social Security numbers, financial account information, medical information, government identification numbers, addresses, or confidential personal information.
+      </p>
+
+      <p className="mt-3 text-sm text-slate-700">
+        Chat Homes AI does not sell your information or use your questions for advertising or profiling.
+      </p>
+
+      <p className="mt-3 text-sm text-slate-700">
+        By selecting Continue, you acknowledge and consent to the transmission of your submitted question to OpenAI for response generation.
+      </p>
+
+      <button
+        onClick={acceptDisclaimer}
+        className="mt-5 w-full rounded-xl bg-yellow-400 py-3 font-bold text-black"
+      >
+        Continue
+      </button>
+    </div>
+  </div>
+)}
 {showHowItWorks && (
   <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
 <div className="max-w-lg rounded-lg bg-white p-6 text-slate-900 shadow-lg">
