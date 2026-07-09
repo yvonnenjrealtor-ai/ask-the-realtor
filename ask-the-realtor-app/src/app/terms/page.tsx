@@ -30,12 +30,20 @@ export default function TermsPage() {
           <h1 className="text-2xl font-semibold tracking-tight text-slate-900 md:text-3xl">Terms of Use</h1>
           <p className="text-sm text-slate-600">Effective Date: April 25, 2026</p>
 
-          <p>Chat Homes AI provides general real estate information for educational purposes only.</p>
-          <p>No broker-client or agency relationship is created through use of this app.</p>
-          <p>Any formal relationship begins only after required disclosures and signed agreements.</p>
-          <p>Information may be AI-generated and should be independently verified.</p>
-          <p>No legal, tax, lending, or financial advice is provided.</p>
-          <p>Contact: contact@chathomesai.com</p>
+         <p>Chat Homes AI provides general real estate information for educational purposes only.</p>
+
+<p>Chat Homes AI uses OpenAI's artificial intelligence services to generate responses. When you submit a question, the text you enter is transmitted to OpenAI solely for the purpose of generating an AI-generated response.</p>
+<p>Please do not submit Social Security numbers, financial account information, medical information, government identification numbers, home addresses, or other confidential personal information.</p>
+          
+<p>No broker-client or agency relationship is created through use of this app.</p>
+
+<p>Any formal relationship begins only after required disclosures and signed agreements.</p>
+
+<p>AI-generated responses should be independently verified.</p>
+
+<p>No legal, tax, lending, or financial advice is provided.</p>
+
+<p>Contact: contact@chathomesai.com</p>
         </div>
       </div>
     </main>
