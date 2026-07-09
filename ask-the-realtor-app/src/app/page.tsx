@@ -279,9 +279,11 @@ setTimeout(() => setSavedNotice(false), 2000);
         When you submit a question, the text you enter is sent to OpenAI solely to generate your answer.
       </p>
 
-      <p className="mt-3 text-sm font-semibold text-slate-900">
-        Please do not enter Social Security numbers, financial account information, medical information, government identification numbers, addresses, or confidential personal information.
-      </p>
+     <p className="mt-3 text-sm font-semibold text-slate-900">
+  Please do not enter Social Security numbers, financial account information,
+  medical information, government identification numbers, home addresses,
+  or confidential personal information.
+</p>
 
       <p className="mt-3 text-sm text-slate-700">
         Chat Homes AI does not sell your information or use your questions for advertising or profiling.
